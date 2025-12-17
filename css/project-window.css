@@ -1,0 +1,73 @@
+.project-window1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    background-color: var(--dark-color);
+    overflow: hidden;
+    position: relative;
+    border: solid var(--dark-color) 1.5px;
+}
+
+
+.project-window1-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .3s;
+    position: relative;
+    transform: scale(100%);
+    margin-top: 37px;
+}
+
+.project-window1-image:hover {
+    filter: brightness(50%);
+    transform: scale(110%);
+    cursor:pointer;
+}
+
+.project-card-data {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    border-bottom: solid var(--dark-color) 1.5px;
+}
+
+.project-card-content {
+    padding: 7px;
+    position: relative;
+    z-index: 1;
+    background-color: var(--light-color);
+}
+
+.project-window2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-color);
+    border: solid var(--dark-color) 1.5px;
+    height: 300px;
+    position: relative;
+}
+
+.project-window2 .project-window-navbar {
+    padding: 7px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    transition: transform 0.3s;
+    z-index: 1;
+    background-color: var(--light-color);
+    border-bottom: solid var(--dark-color) 1.5px;
+}
+
+.project-window2 .project-window-content {
+    padding: 10px;
+    width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+    .project-window1 {
+        margin: 0;
+    }
+}

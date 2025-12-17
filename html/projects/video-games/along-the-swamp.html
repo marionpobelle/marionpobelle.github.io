@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marion Pobelle - Along the Swamp</title>
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/text.css">
+    <link rel="stylesheet" href="/css/page-specific-project.css">
+    <link rel="stylesheet" href="/css/project-window.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="grid grid-header"></div>
+
+    <navbar id="navbar"></navbar>  
+    
+    <div class="grid grid-index-1"></div>
+    <section class="landing-section">
+        <h1>Professional Projects</h1>
+    </section>
+
+    <section class="game-section">
+        <div class="game-div">
+            <h1 class="game-title-h1">Along the Swamp</h1>
+            <div class="game-info">
+                <div>
+                    <p>
+                        <span class="text-highlight">Platform: </span>PC
+                        <br><span class="text-highlight">Duration: </span>2 months
+                        <br><span class="text-highlight">Team size: </span>3
+                        <br><span class="text-highlight">Role: </span>Programmer
+                    </p> 
+                </div>
+                <div class="div-column">
+                    <a class="better-button" href="https://zizelexe.itch.io/along-the-swamp" target="_blank" style="margin-bottom:20px;">Find on Itch.io</a>
+                </div>
+            </div>
+            <div>
+                <p>All screenshots and videos reflect the work of the entire team (art, code, audio, design…)</p>
+            </div>
+            <div>
+                <!-- Overview -->
+                <div style="padding-bottom: 20px; padding-top: 10px;">
+                    <h3>OVERVIEW</h3>
+                </div>
+                <div>
+                    <p>The project detailed in this document is the result of a <span class="text-highlight">student experimentation internship</span>, a partnership between the <span class="text-highlight">Center for Ecology 
+                        and Conservation Sciences (CESCO)</span>, a research institute supported by the National Museum of Natural History (MNHN), and CNAM ENJMIN. 
+                    </p>
+                    <p>The goal was to <span class="text-highlight">prototype several game ideas</span> that could be used in the context of <span class="text-highlight">research</span>, based on the principles of <span class="text-highlight">mutual agency 
+                        between biodiversity and society</span>, accessibility, and curiosity, with an overall positive tone.
+                    </p>
+                    <p>Along the Swamp is a contemplative 2D top-down game. Aboard a small submarine, take your passenger on a tour of the swamps while admiring 
+                        the wonderful biodiversity that has made it home. Take your time, photograph the flora and fauna, and share your photos with the explorers 
+                        who will come after you.
+                    </p>
+                    <div>
+                        <p><span class="text-highlight">As the only programmer on Along the Swamp, my duties included:</span>
+                            <ul>
+                                <li class="nicer-text">Develop gameplay features (player controller, moving geometry…)</li>
+                                <li class="nicer-text">Develop and refine AI behavior (state machine, illusion of credible behavior, schedule system…)</li>
+                                <li class="nicer-text">Implement User Interface (design menus, set up navigation…)</li>
+                                <li class="nicer-text">Asset integration (User Interface, 2D assets, audio…)</li>
+                                <li class="nicer-text">Improve the game designer’s work environment with editor programming and a custom inspector</li>
+                                <li class="nicer-text">Performance control and optimization</li>
+                                <li class="nicer-text">Collaborating closely with artists and game designers</li>
+                                <li class="nicer-text">Maintain a feature list with regular updates so that everyone can track progress</li>
+                                <li class="nicer-text">Writing technical documentation (naming convention, integration procedure…)</li>
+                                <li class="nicer-text">And more!</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+                <!-- Specific Section -->
+                <div style="padding-bottom: 20px;  padding-top: 10px;">
+                    <h3>AI BEHAVIOR & SCHEDULE</h3>
+                </div>
+                <div>
+                    <div class="div-row">
+                        <div style="padding-bottom: 10px; padding-top: 50px;">
+                            <p>
+                                Along the Swamp uses the current time of day to make changes to the environment.
+                            </p>
+                            <div class="banner-div">
+                                <img class="banner-image" src="/img/video-games/along-the-swamp/swamp-timeofday.png" style="width: 100%">
+                            </div>
+                            <p>
+                                All species exhibit <span class="text-highlight">basic behaviors</span> (movement, reaction to other species, etc.) but most <span class="text-highlight">also react to the time of day</span>. For example, flowers 
+                                will only bloom during the day, certain animals will hunt at specific times of the day, other plants will glow at night...
+                            </p>
+                            <p>
+                                <span class="text-highlight">Changes</span> due to the time of day can be <span class="text-highlight">explicit or implicit</span>:
+                                <ul>
+                                    <li class="nicer-text">Crickets only appear in the evening and at night -> explicit</li>
+                                    <li class="nicer-text">Fish are slower at night, without predators -> implicit</li>
+                                </ul>
+                            </p>
+                            <p>
+                                <span class="text-highlight">Each AI</span> type has two scripts that are connected to it: <span class="text-highlight">a spawner and a behavior handler</span>. The spawner ensures that 
+                                the AI's global behavior is determined by the time of day (in water/on the ground) and takes care of its positioning within its habitat. 
+                                The handler will oversee the distinct actions of every AI, such as their movement and reactions to players.
+                            </p>
+                        </div>
+                        <img src="/img/video-games/along-the-swamp/swamp-notebook.png" style="width: 50%; padding-left: 150px; padding-bottom: 20px; padding-top: 20px;">
+                    </div>
+                </div>
+                <!-- Specific Section -->
+                <div style="padding-bottom: 20px;  padding-top: 10px;">
+                    <h3>PICTURE MODE</h3>
+                </div>
+                <div>
+                    <p>
+                        One of the main features of the game is the <span class="text-highlight">ability to take pictures</span>. The camera icon allows you to switch the controls to “picture mode.”
+                    </p>
+                    <p>
+                        In photo mode:
+                        <ul>
+                            <li class="nicer-text">A photo frame appears in the center of the screen, the camera zooms in</li>
+                            <li class="nicer-text">It is no longer possible to move, dive, or access the logbook</li>
+                            <li class="nicer-text">The camera now follows the mouse in real time</li>
+                            <li class="nicer-text">A radius around the submarine blocks the camera at a maximum distance</li>
+                        </ul>
+                    </p>
+                    <p>
+                        The photo is instantaneously captured <span class="text-highlight">based on the current angle of view</span> and an animation shows the picture printed on a Polaroid. A <span class="text-highlight">camera 
+                        detection system identifies whether an animal or plant is in the picture</span>. If a species that has never been photographed is detected, the 
+                        phrase “New species discovered” will be displayed.
+                    </p>
+                    <img src="/img/video-games/along-the-swamp/swamp-CapturePhoto.png" style="width: 50%; padding-bottom: 20px; padding-top: 20px;">
+                    <p>
+                        To capture a picture: we remove the HUD and make a Texture2D out of the screen.
+                    </p>
+                    <p>
+                        <span class="text-highlight">To show a picture</span>: we <span class="text-highlight">make a Sprite out of the Texture2D we got from the captured screen</span>, and we display a version of this Sprite to the 
+                        screen as well as save another one for the notebook.
+                        <br>We save the <span class="text-highlight">Sprite with the screen’s dimensions</span>, the <span class="text-highlight">polaroid format</span> will be ensured through <span class="text-highlight">UI masks</span>.
+                    </p>
+                    <img src="/img/video-games/along-the-swamp/swamp-ShowPhoto.png" style="width: 100%; padding-bottom: 20px; padding-top: 20px;">
+                    <p>
+                        To find a species on the picture: <span class="text-highlight">each species has an data component</span> attached that contains its information <span class="text-highlight">(name, sprite, description, is 
+                        already discovered or not)</span>. When taking a picture, we check if we find within the detection radius of the camera (the part of the screen that 
+                        will appear on the polaroid) <span class="text-highlight">objects that are marked as plants or animals through a collision layer</span>. If we find something, we give that information 
+                        to the player and register the species data in the notebook.
+                    </p>
+                    <img src="/img/video-games/along-the-swamp/swamp-plantdetection.png" style="width: 100%; padding-bottom: 20px; padding-top: 20px;">
+                </div>
+                <!-- Gallery -->
+                <div style="padding-bottom: 20px;  padding-top: 10px;">
+                    <h3>GALLERY</h3>
+                </div>
+                
+                <div class="div-row" style="width: 100%; gap: 20px; padding-bottom: 20px;">
+                    <img class="gallery-image" src="/img/video-games/along-the-swamp/swamp1.png" style="width: 49%;">
+                    <img class="gallery-image" src="/img/video-games/along-the-swamp/swamp2.png" style="width: 49%;">
+                </div>
+                <div class="div-row" style="width: 100%; gap: 20px; padding-bottom: 20px;">
+                    <img class="gallery-image" src="/img/video-games/along-the-swamp/swamp3.png" style="width: 49%;">
+                    <img class="gallery-image" src="/img/video-games/along-the-swamp/swamp4.png" style="width: 49%;">
+                </div>
+
+                <div style="padding-bottom: 40px;"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="div-row other-projects" id="other-projects"></section>
+
+    <footer id="footer"></footer>
+
+    <script src="/data/video-games.js"></script>
+    <script src="/js/components/navbar.js"></script>
+    <script src="/js/components/footer.js"></script>
+    <script src="/js/components/other-projects.js"></script>
+    <script src="/js/next-vg.js"></script>
+</body>
+</html>

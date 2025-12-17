@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marion Pobelle - Puppy Guards</title>
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/text.css">
+    <link rel="stylesheet" href="/css/page-specific-project.css">
+    <link rel="stylesheet" href="/css/project-window.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="grid grid-header"></div>
+
+    <navbar id="navbar"></navbar>  
+    
+    <div class="grid grid-index-1"></div>
+    <section class="landing-section">
+        <h1>Personal Projects</h1>
+    </section>
+
+    <section class="game-section">
+        <div class="game-div">
+            <h1 class="game-title-h1">Puppy Guards</h1>
+            <div class="game-info">
+                <div>
+                    <p>
+                        <span class="text-highlight">Platform: </span>PC
+                        <br><span class="text-highlight">Duration: </span>3 months
+                        <br><span class="text-highlight">Team size: </span>5
+                        <br><span class="text-highlight">Role: </span>Programmer
+                    </p> 
+                </div>
+                <div class="div-column">
+                    <a class="better-button" href="https://zizelexe.itch.io/puppy-guards" target="_blank" style="margin-bottom:20px;">Find on Itch.io</a>
+                </div>
+            </div>
+            <div>
+                <img src="/img/video-games/puppy-guards/puppy-guards-banner.png" style=" width:60%; padding-bottom: 20px; padding-top: 20px; display:block; margin-left:auto; margin-right:auto;">
+                <p style="text-align: center;">All screenshots and videos reflect the work of the entire team (art, code, audio, design…)</p>
+            </div>
+            <div>
+                <!-- Overview -->
+                <div style="padding-bottom: 20px; padding-top: 10px;">
+                    <h3>OVERVIEW</h3>
+                </div>
+                <div>
+                    <p>
+                        Puppy Guards is a 2 - 4 players cooperative couch game in which players take on the role of museum watchmen in charge of protecting the art pieces from at best clumsy, at worst malicious visitors!
+                    </p>
+                    <p>
+                        Build barricades with furniture, bark at the visitors or knock them down. Everything is worth it to save the relics from the disaster.
+                    </p>
+                    <div class="div-row" style="width: 100%; height: 100%; margin-bottom: 30px;">
+                        <iframe class="video-trailer" src="https://www.youtube.com/embed/j1yve42zows?si=qfc2qTEyLZAci_Ia" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allow="fullscreen"></iframe>
+                    </div>
+                    <div>
+                        <p><span class="text-highlight">As the only programmer on Puppy Guards, I had to undertake every aspect of programming the game, as well as assess the feasibility of each feature within the time and means we had. My duties included:</span>
+                            <ul>
+                                <li class="nicer-text">Develop gameplay features (player controller, moving geometry…)</li>
+                                <li class="nicer-text">Develop and refine AI behavior (state machine, illusion of credible behavior…)</li>
+                                <li class="nicer-text">Implement User Interface (design menus, set up navigation…)</li>
+                                <li class="nicer-text">Asset integration (User Interface, 3D models, animations…)</li>
+                                <li class="nicer-text">Improve the game designer’s work environment with editor programming and a custom inspector</li>
+                                <li class="nicer-text">Performance control and optimization</li>
+                                <li class="nicer-text">Collaborating closely with environment artists, sound designers and game designers</li>
+                                <li class="nicer-text">Maintain a feature list with regular updates so that everyone can track progress</li>
+                                <li class="nicer-text">Writing technical documentation (naming convention, integration procedure…)</li>
+                                <li class="nicer-text">And more!</li>
+                            </ul>
+                        </p>
+                        <p>
+                            As the primary point of contact for the rest of the team, I created and maintained the game’s feature list and documentation. 
+                            <span class="text-highlight">After that, I detailed the structure of each feature on paper, prototyped them, processed the team’s feedback as I went, and then 
+                            worked on and owned them until polished</span>.
+                        </p>
+                        <p>
+                            Some of my teammates wanted to learn programming, so I did my best to help them, be available and allow them to implement small features themselves.
+                        </p>
+                    </div>
+                </div>
+                <!-- Specific Section -->
+                <div style="padding-bottom: 20px;  padding-top: 10px;">
+                    <h3>GAMEPLAY</h3>
+                </div>
+                <div>
+                    <p>
+                        Puppy Guards is a gamepad only game as it was designed as a couch coop. <span class="text-highlight">Please note that any input encountered refers to an Xbox controller</span>.
+                    </p>
+                    <p>
+                        The player’s <span class="text-highlight">movement uses Unity’s physics system</span> for a fun controller and a goofy look. To move the player, we used the velocity of its 
+                        Rigidbody as well as a speed-up rate and a slow down factor to fine-tune the movement.
+                    </p>
+                    <p>
+                        <span class="text-highlight">The three principal player actions are Dash (B), Bark (X) and Grab (A).</span>
+                        <ul>
+                            <li class="nicer-text">The Dash (B) input improves the players’ movement, but can also be used to interact with AI.</li>
+                            <li class="nicer-text">The Bark (X) input is used to interact with AI; its use will be detailed further below.</li>
+                            <li class="nicer-text">The Grab(A) input is used to grab specific geometry (furniture) and move it around.</li>
+                        </ul>                   
+                    </p>
+                    <p>
+                        <span class="text-highlight">Grabbing creates a FixedJoint between the piece of furniture and the player</span>. We added angle control to ensure the player would be attached to the 
+                        object correctly. The FixedJoint between a movable element and a player breaks when the player presses the Grab (A) input again.
+                    </p>
+                </div>
+                <!-- Specific Section -->
+                <div style="padding-bottom: 20px;  padding-top: 10px;">
+                    <h3>AI</h3>
+                </div>
+                <div>
+                    <p>
+                        Puppy Guards resembles Tower Defense games, except <span class="text-highlight">the “enemies” are not really targeting the structures</span>. Because of that, the artificial intelligence 
+                        (AI) had to give the <span class="text-highlight">illusion of credible behavior</span>. It had to be simple, but look like it had specific objectives for people to attribute intentions to it. 
+                    </p>
+                    <p>
+                        Every AI type inherits from a <span class="text-highlight">base State Machine</span>. The states available to an AI are <span class="text-highlight">Idle, Move and Special</span>. The Idle state gives the illusion that an AI stops 
+                        to take in the environment and allow players to breathe. The Move state allows each AI to move from point A to point B, point A being its current position and 
+                        point B being selected randomly within a grid of possible positions. The Special state allows each AI to execute a unique special behavior if it has one.
+                    </p>
+                    <p>
+                        Each type of AI has a <span class="text-highlight">special behavior</span>. It makes the <span class="text-highlight">game more fun, varied and unpredictable</span>! I implemented three different types:
+                        <ul>
+                            <li class="nicer-text">Sheep: a <span class="text-highlight">basic AI</span>. Its special behavior is that when a player barks within its range, a sheep will walk away in the opposite direction. They also get stunned when dashed into. This allows for easy crowd control.</li>
+                            <li class="nicer-text">Goat: <span class="text-highlight">capable of pushing furniture</span> on contact. This special behavior was designed to disturb the players’ plan with furniture positioning. To control this AI, the player can simply tap it to make it change destination. They will not react to barks or dashes.</li>
+                            <li class="nicer-text">Chicks: act as excited children and <span class="text-highlight">will randomly start to run</span>, stunning players on contact. This special behavior forces players to rely on quick reflexes and good terrain coverage. This AI does not care if you bark at it, but its small size will allow players to propel it out of the way with a dash.</li>
+                        </ul>
+                    </p>
+                </div>
+                <div class="div-row" style="width: 100%; gap: 20px; padding-bottom: 20px;">
+                    <div>
+                        <img src="/img/video-games/puppy-guards/puppy-guards-ai1.gif" style="width: 100%;">
+                        <p style="text-align: center;">Two players holding an object.</p>
+                    </div>
+                    <div>
+                        <img src="/img/video-games/puppy-guards/puppy-guards-ai2.gif" style="width: 100%;">
+                        <p style="text-align: center;">A goat pushing an object.</p>
+                    </div>
+                </div>
+                <!-- Specific Section -->
+                <div style="padding-bottom: 20px;  padding-top: 10px;">
+                    <h3>LOCAL MULTIPLAYER</h3>
+                </div>
+                <div>
+                    <p>
+                        It was my <span class="text-highlight">first time implementing local multiplayer</span> so this feature is the one that took me the most amount of time. I used the new input system 
+                        as well as the C# class generated by the player controls. I made the system <span class="text-highlight">scalable and easily reusable throughout projects</span>.
+                    </p>
+                </div>
+                <!-- Gallery -->
+                <div style="padding-bottom: 20px;  padding-top: 10px;">
+                    <h3>GALLERY</h3>
+                </div>        
+                <div class="div-row" style="width: 100%; gap: 20px; padding-bottom: 20px;">
+                    <img class="gallery-image-no-border" src="/img/video-games/puppy-guards/puppy-guards1.png" style="width: 49%;">
+                    <img class="gallery-image-no-border" src="/img/video-games/puppy-guards/puppy-guards2.png" style="width: 49%;">
+                </div>
+                <div class="div-row" style="width: 100%; gap: 20px; padding-bottom: 20px;">
+                    <img class="gallery-image-no-border" src="/img/video-games/puppy-guards/puppy-guards3.png" style="width: 49%;">
+                    <img class="gallery-image-no-border" src="/img/video-games/puppy-guards/puppy-guards4.png" style="width: 49%;">
+                </div>
+                
+                <!-- More -->
+                <div style="padding-bottom: 20px;  padding-top: 10px;">
+                    <h3>MORE</h3>
+                </div>
+                <div style="padding-bottom: 40px;">
+                    <p>Puppy Guards was presented during the <span class="text-highlight">2024 edition of the “Busan Indie Connect”</span> festival held in South Korea!</p>
+                    <img src="/img/video-games/puppy-guards/puppy-guards-bic.png" style="width: 50%; display:block; margin-left:auto; margin-right:auto; padding-bottom: 20px; padding-top: 20px;">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="div-row other-projects" id="other-projects"></section>
+
+    <footer id="footer"></footer>
+
+    <script src="/data/video-games.js"></script>
+    <script src="/js/components/navbar.js"></script>
+    <script src="/js/components/footer.js"></script>
+    <script src="/js/components/other-projects.js"></script>
+    <script src="/js/next-vg.js"></script>
+</body>
+</html>

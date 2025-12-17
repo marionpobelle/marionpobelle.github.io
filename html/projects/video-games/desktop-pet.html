@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marion Pobelle - Desktop Pet</title>
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/text.css">
+    <link rel="stylesheet" href="/css/page-specific-project.css">
+    <link rel="stylesheet" href="/css/project-window.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="grid grid-header"></div>
+
+    <navbar id="navbar"></navbar>  
+    
+    <div class="grid grid-index-1"></div>
+    <section class="landing-section">
+        <h1>Personal Projects</h1>
+    </section>
+
+    <section class="game-section">
+        <div class="game-div">
+            <h1 class="game-title-h1">Desktop Pet</h1>
+            <div class="game-info">
+                <div>
+                    <p>
+                        <span class="text-highlight">Platform: </span>PC
+                        <br><span class="text-highlight">Duration: </span>4 months
+                        <br><span class="text-highlight">Team size: </span>1
+                        <br><span class="text-highlight">Role: </span>Programmer
+                    </p> 
+                </div>
+                <div class="div-column">
+                    <a class="better-button" href="https://zizelexe.itch.io/desktop-pet" target="_blank" style="margin-bottom:20px;">Find on Itch.io</a>
+                </div>
+            </div>
+            <div>
+                <!-- Overview -->
+                <div style="padding-bottom: 20px; padding-top: 10px;">
+                    <h3>OVERVIEW</h3>
+                </div>
+                <div>
+                    <p>
+                        A little friend that runs around on your desktop, plays with your cursor and keeps you company. Made using Unity,  
+                        works with both Windows 10 and Windows 11. 
+                    </p>
+                    <p>
+                        I had been thinking about getting a desktop pet for a while, but could not find anything that suited what I wanted, so I made my own!
+                    </p>
+                    <img src="/img/video-games/desktop-pet/desktop-pet-overview.gif" style="width: 80%; display:block; margin-left:auto; margin-right:auto; padding-bottom: 20px; padding-top: 20px;">
+                    <div>
+                        <p><span class="text-highlight">My tasks included: :</span>
+                            <ul>
+                                <li class="nicer-text">Develop gameplay features (interactions…)</li>
+                                <li class="nicer-text">Develop and refine AI behavior (state machine, illusion of credible behavior…)</li>
+                                <li class="nicer-text">Implement User Interface (accessibility settings, scalability…)</li>
+                                <li class="nicer-text">Asset integration (User Interface, 2D sprites, Animations…)</li>
+                                <li class="nicer-text">Transparent background with the Windows API and compatibility</li>
+                                <li class="nicer-text">And more!</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+                <!-- Specific Section -->
+                <div style="padding-bottom: 20px;  padding-top: 10px;">
+                    <h3>SEE-THROUGH BACKGROUND</h3>
+                </div>
+                <div>
+                    <p>
+                        In order to implement the <span class="text-highlight">see-through background</span> and ensure that the user could interact with anything on their desktop outside of the application, 
+                        I used the <span class="text-highlight">Unity Windows API</span>.
+                    </p>
+                    <p>
+                        To make the background see-through, <span class="text-highlight">I manipulated the application’s window layered attribute</span> by adjusting the color key and alpha values for 
+                        <span class="text-highlight">selective transparency</span>, without making the window input transparent.
+                    </p>
+                </div>
+                <!-- Specific Section -->
+                <div style="padding-bottom: 20px;  padding-top: 10px;">
+                    <h3>AI</h3>
+                </div>
+                <div>
+                    <p>
+                        The AI has a <span class="text-highlight">base class</span> called AnimalHandler that takes care of anything relating to the <span class="text-highlight">AI’s mood, status, affection level, hunger, data saving, and 
+                        basic interactions such as feed and drag</span>. 
+                    </p>
+                    <p>
+                        Then, <span class="text-highlight">each animal derives from this class</span> using inheritance and implements its <span class="text-highlight">specific behaviors</span> with a simple state machine, tuned to each animal’s needs.
+                    </p>
+                </div>
+                <!-- Gallery -->
+                <div style="padding-bottom: 20px;  padding-top: 10px;">
+                    <h3>GALLERY</h3>
+                </div>
+                
+                <div class="div-row" style="width: 100%; gap: 20px; padding-bottom: 20px;">
+                    <img class="gallery-image" src="/img/video-games/desktop-pet/pet1.gif" style="width: 12%;">
+                    <img class="gallery-image" src="/img/video-games/desktop-pet/pet2.gif" style="width: 12%;">
+                    <img class="gallery-image" src="/img/video-games/desktop-pet/pet3.gif" style="width: 12%;">
+                    <img class="gallery-image" src="/img/video-games/desktop-pet/pet4.gif" style="width: 12%;">
+                    <img class="gallery-image" src="/img/video-games/desktop-pet/pet5.gif" style="width: 12%;">
+                    <img class="gallery-image" src="/img/video-games/desktop-pet/pet6.gif" style="width: 12%;">
+                </div>
+                <div class="div-row" style="width: 100%; gap: 20px; padding-bottom: 20px;">
+                    <img class="gallery-image" src="/img/video-games/desktop-pet/pet7.gif" style="width: 12%;">
+                    <img class="gallery-image" src="/img/video-games/desktop-pet/pet8.gif" style="width: 12%;">
+                    <img class="gallery-image" src="/img/video-games/desktop-pet/pet9.gif" style="width: 12%;">
+                    <img class="gallery-image" src="/img/video-games/desktop-pet/pet10.gif" style="width: 12%;">
+                    <img class="gallery-image" src="/img/video-games/desktop-pet/pet11.gif" style="width: 12%;">
+                    <img class="gallery-image" src="/img/video-games/desktop-pet/pet12.gif" style="width: 12%;">
+                </div>
+                <div class="div-row" style="width: 100%; gap: 20px; padding-bottom: 20px;">
+                    <img class="gallery-image" src="/img/video-games/desktop-pet/pet13.gif" style="width: 12%;">
+                </div>
+                <!-- More -->
+                <div style="padding-bottom: 20px;  padding-top: 10px;">
+                    <h3>MORE</h3>
+                </div>
+                <div style="padding-bottom: 40px;">
+                    <p>Desktop Pet is available on Itch.io. It features three cats as free pets and a bundle of 10 other animals for 1 dollar. Here are the analytics for the application from when it was release in April 2025 to August 2025.</p>
+                    <img src="/img/video-games/desktop-pet/desktop-pet-analytics.png" style="width: 80%; display:block; margin-left:auto; margin-right:auto; padding-bottom: 20px; padding-top: 20px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="div-row other-projects" id="other-projects"></section>
+
+    <footer id="footer"></footer>
+
+    <script src="/data/video-games.js"></script>
+    <script src="/js/components/navbar.js"></script>
+    <script src="/js/components/footer.js"></script>
+    <script src="/js/components/other-projects.js"></script>
+    <script src="/js/next-vg.js"></script>
+</body>
+</html>

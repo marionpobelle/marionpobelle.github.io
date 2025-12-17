@@ -1,0 +1,19 @@
+.resume-button-space {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 30px;
+    margin-right: 3%;
+}
+
+.project-window1-image-resume {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .3s;
+    position: relative;
+    transform: scale(100%);
+    margin-top: 37px;
+}

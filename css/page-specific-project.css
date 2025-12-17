@@ -1,0 +1,113 @@
+.other-projects {
+    background-color: var(--background-color);
+    border: solid 1.5px var(--dark-color); 
+    border-left: 0;
+    border-right: 0;
+    width: calc(3vw*26 + .1em);
+    height: 30px;
+    position: absolute;
+    bottom: 5.5vw;
+    left: 0;
+    right: 0;
+    margin-bottom: 30px;
+}
+
+.next-project-button {
+    height: 100%; 
+    width: 100px; 
+    font-size: 15px;
+    text-decoration: none;
+    transform: .3s;
+    border: solid 1.5px var(--dark-color); 
+    border-top: 0;
+    border-bottom: 0;
+    background-color: var(--light-color);
+    color: var(--primary-color);
+    padding: 0;
+}
+
+.next-project-button:hover {
+    color: var(--primary-color);
+    background-color: white;
+    cursor:pointer;
+}
+
+.next-project-title {
+    font-family: 'Nunito', sans-serif; 
+    font-size:15px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+#right-project, #left-project {
+    margin: 0;
+}
+
+.game-section
+{
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0 10px;
+}
+
+.game-div
+{
+  margin-left:30px;
+  margin-right:100px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.gallery-image
+{
+  transition: 0.4s;
+  border: 2px solid var(--primary-color);
+}
+
+.gallery-image-no-border {
+  transition: 0.4s;
+}
+
+.gallery-image:hover {
+  transform: scale(1.05);
+}
+
+.gallery-image-no-border:hover {
+  transform: scale(1.05);
+}
+
+.banner-image {
+    width:50%;
+    margin-bottom: 40px;
+}
+
+.banner-div {
+    text-align: center;
+    padding-bottom: 5px;
+    padding-top: 30px;
+}
+
+.game-title-h1 {
+  font-family: 'CyGrotesk', sans-serif;
+  font-size: 5vh;
+  color: var(--primary-color);
+  margin-top: 10px;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  text-shadow:  0px 0px var(--accent-color);
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1.5px;
+}
+
+.game-info {
+    display: flex;
+    gap: 200px;
+    margin-bottom: 20px;
+}
+
+.video-trailer {
+    width: 100%;
+    aspect-ratio: 16/9;
+}

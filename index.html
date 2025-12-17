@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marion Pobelle - Home</title>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/text.css">
+    <link rel="stylesheet" href="css/project-window.css">
+    <link rel="stylesheet" href="css/page-index.css">
+    <link href="/font/CyGrotesk-WideBlack.otf">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+    <navbar id="navbar"></navbar>
+    
+    <div class="grid grid-index-1"></div>
+    <section class="landing-section">
+        <h1>Game Programmer Portfolio</h1>
+    </section>
+
+    <div class="div-row" id="index-main-section">
+        <!-- ABOUT ME  -->
+        <section id="about-section">
+            <div class="div-row">
+                <img src="img/about/Pfp.png" alt="" class="profile-picture"> 
+                <p class = "intro-title">
+                    <span class="nameplate"> Hi! I’m <span class="text-highlight">Marion</span></span>
+                    <br><span class="text-highlight">Junior Game Programmer</span>
+                    <br>Generalist Programmer @ <a class="link-in-text" href="https://toebeanclubgames.com/">Toe Bean Club</a>
+                </p>   
+            </div>
+            <div class="intro-text">
+                <p>
+                    Curious, enthusiastic and a jack-of-all-trades, I recently graduated from ENJMIN with a <span class="text-highlight">Master in 
+                    Game Programming</span>. While I mainly am a <span class="text-highlight">gameplay programmer</span>, I enjoy toying with UI, tools, and every 
+                    other aspect of game development! I’m currently working as a <span class="text-highlight">Generalist Programmer at Toe Bean Club</span>.
+                </p>
+                <p>
+                    I am not afraid to learn and love trying out new things, growing and pouring my passion into making games. 
+                </p>
+            </div>
+            <div class="div-row">
+                <div>
+                    <h3>Tools</h3>
+                    <div style="line-height: 50px;">
+                        <span class="skill-vignet" onmouseenter="playSound('XyloDO')">Unity 2D/3D</span>
+                        <span class="skill-vignet" onmouseenter="playSound('XyloRE')">Unreal Engine</span>
+                        <span class="skill-vignet" onmouseenter="playSound('XyloMI')">Blender</span>
+                        <span class="skill-vignet" onmouseenter="playSound('XyloFA')">Canva</span>
+                        <span class="skill-vignet" onmouseenter="playSound('XyloSOL')">GitHub</span>
+                    </div>
+                </div>
+                <div>
+                    <h3>Development</h3>
+                    <div style="line-height: 50px;">
+                        <span class="skill-vignet" onmouseenter="playSound('XyloDO')">C#</span>
+                        <span class="skill-vignet" onmouseenter="playSound('XyloRE')">C++</span>
+                        <span class="skill-vignet" onmouseenter="playSound('XyloMI')">SFML</span>
+                        <span class="skill-vignet" onmouseenter="playSound('XyloFA')">Python</span>
+                        <span class="skill-vignet" onmouseenter="playSound('XyloSOL')">JavaScript</span>
+                        <span class="skill-vignet" onmouseenter="playSound('XyloLA')">HTML</span>
+                        <span class="skill-vignet" onmouseenter="playSound('XyloSI')">CSS</span>
+                        <span class="skill-vignet" onmouseenter="playSound('XyloDObis')">OpenGL</span>
+                    </div>
+                </div>  
+            </div>
+            <div>
+                <h3>LANGUAGE PROFICIENCY</h3>
+                <p>I have native fluency in <span class="text-highlight">French</span> and fluency in <span class="text-highlight">English</span>.</p>
+            </div>
+        </section>
+
+        <!-- PROJET SECTION -->
+        <section id="project-section">
+            <div class="project-window1" style="width:100%; margin: 0 0 20px 0;">
+                <img class="project-window1-image text-zone" id='project-image-a' onclick="window.location = '/html/projects/video-games/mirage-miracle-quest.html'" src="./img/video-games/key-art/mirage-keyart.jpg"/>
+                <div class="project-card-data">
+                    <div class="project-card-content">
+                        <p id="project-nav-title" class="project-window-title">Currently working on</p>
+                    </div>
+                </div>
+            </div>
+            <div class="project-window2" style="width:100%; margin: 0 0 20px 0;">
+                <div class="project-window-navbar">
+                    <p class="project-window-title" id="project-id">UPDATES</p>
+                </div>
+                <div class="project-window-content">
+                    <ul>
+                        <li><p>Portfolio website development</p></li>
+                        <li><p>Mirage Wholesome snack DEMO!</p></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-window2" style="width:100%; margin: 0 0 10px 0;">
+                <div class="project-window-navbar">
+                    <p class="project-window-title" id="project-id">CONTACT ME</p>
+                </div>
+                <div class="project-window-content" style="padding-left: 30px;">
+                    <p>Let's work together! Contact me at: <span><a href="javascript:void(0);" class="link-in-text" onclick="CopyText()">hi-marionpbl@outlook.com</a></span></p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <footer id="footer"></footer>
+
+    <script src="/js/copy.js"></script>
+    <script src="/js/components/navbar.js"></script>
+    <script src="/js/components/footer.js"></script>
+    <script src="/js/sfx-player.js"></script>
+
+    <audio id="XyloDO" src="audio/Xylophone-DO.wav"></audio>
+    <audio id="XyloRE" src="audio/Xylophone-RE.wav"></audio>
+    <audio id="XyloMI" src="audio/Xylophone-MI.wav"></audio>
+    <audio id="XyloFA" src="audio/Xylophone-FA.wav"></audio>
+    <audio id="XyloSOL" src="audio/Xylophone-SOL.wav"></audio>
+    <audio id="XyloLA" src="audio/Xylophone-LA.wav"></audio>
+    <audio id="XyloSI" src="audio/Xylophone-SI.wav"></audio>
+    <audio id="XyloDObis" src="audio/Xylophone-DObis.wav"></audio>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marion Pobelle - Slinghost</title>
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/text.css">
+    <link rel="stylesheet" href="/css/page-specific-project.css">
+    <link rel="stylesheet" href="/css/project-window.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="grid grid-header"></div>
+
+    <navbar id="navbar"></navbar>  
+    
+    <div class="grid grid-index-1"></div>
+    <section class="landing-section">
+        <h1>Personal Projects</h1>
+    </section>
+
+    <section class="game-section">
+        <div class="game-div">
+            <h1 class="game-title-h1">Slinghost</h1>
+            <div class="game-info">
+                <div>
+                    <p>
+                        <span class="text-highlight">Platform: </span>-
+                        <br><span class="text-highlight">Duration: </span>5 days
+                        <br><span class="text-highlight">Team size: </span>11
+                        <br><span class="text-highlight">Role: </span>Programmer
+                    </p> 
+                </div>
+                <div class="div-column">
+                    <a class="better-button" href="https://zizelexe.itch.io/slinghost" target="_blank" style="margin-bottom:20px;">Find on Itch.io</a>
+                </div>
+            </div>
+            <div>
+                <p>All screenshots and videos reflect the work of the entire team (art, code, audio, design…)</p>
+            </div>
+            <div>
+                <!-- Overview -->
+                <div style="padding-bottom: 20px; padding-top: 10px;">
+                    <h3>OVERVIEW</h3>
+                </div>
+                <div>
+                    <p>
+                        Slinghost is an arcade shooter game with a <span class="text-highlight">physical installation</span>, in which you have to shoot pumpkins with a giant slingshot at invisible ghosts, 
+                        slowly coming towards you... before they reach you!
+                    </p>
+                    <p>
+                        This project was realized in <span class="text-highlight">5 days</span> as part of a <span class="text-highlight">workshop on accessibility</span>. 
+                    </p>
+                    <p>
+                        NOTE : even though the game is downloadable and playable with mouse and keyboard, it was meant to be played using the homemade 
+                        "giant slingshot controller" the team crafted, exposed during a temporary event.
+                    </p>
+                    <div class="div-row" style="width: 100%; height: 100%; margin-bottom: 30px;">
+                        <iframe class="video-trailer" src="https://www.youtube.com/embed/DvQU9SjbC0I?si=RvfapvRyY8RMIf2_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allow="fullscreen"></iframe>
+                    </div>
+                    <div>
+                        <p><span class="text-highlight">The main elements that needed to be addressed were the arduino, the slingshot controller and the gameplay. My tasks included: </span>
+                            <ul>
+                                <li class="nicer-text">Develop gameplay features (gameplay loop, AI…)</li>
+                                <li class="nicer-text">Implement User Interface (accessibility settings, scalability…)</li>
+                                <li class="nicer-text">Asset integration (User Interface, 2D sprites, animations, feedback…)</li>
+                                <li class="nicer-text">Working on the homemade controller (aim, haptic rumbles, construction, maximum stretch…)</li>
+                                <li class="nicer-text">And more!</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+                <!-- Specific Section -->
+                <div style="padding-bottom: 20px;  padding-top: 10px;">
+                    <h3>CONTROLLER</h3>
+                </div>
+                <div>
+                    <p>
+                        The first <span class="text-highlight">main component</span> of our controller is a <span class="text-highlight">Switch Joy-Con</span>. It was easy to hook up to Unity and <span class="text-highlight">the Ring Fit shape was great to grip</span> for a big 
+                        Frankenstein slingshot. However, it had some <span class="text-highlight">shortcomings</span>: the Joy-Con <span class="text-highlight">could only record its velocity and relative rotation</span>, which was insufficient for 
+                        accurate targeting.
+                    </p>
+                    <p>
+                        Our <span class="text-highlight">second component</span>, a <span class="text-highlight">VR set-up</span>, covered for the Joy-Con limitations. We sat up the headset as well as lateral cameras around our installation and 
+                        hooked up a VR controller to the Ring Fit. This way, we could <span class="text-highlight">access proper positioning and rotation data</span>, allowing us to implement <span class="text-highlight">suitable aiming</span>.
+                    </p>
+                    <p>
+                        The whole contraption was tied up to a <span class="text-highlight">hand-crafted metal frame with robust elastics</span>, as well as some regular ropes to ensure the elastics would not be stretched too hard.
+                    </p>
+                    <p>
+                        When the velocity of the Switch Joy-Con reaches a certain threshold, we know the slingshot was launched, and we compute the impact point from the 
+                        Joy-Con’s velocity for force, and from the position and rotation data of the VR controller.
+                    </p>
+                    <p>
+                        A WII controller would have been a fun option to explore as well!
+                    </p>
+                </div>
+                <!-- Specific Section -->
+                <div style="padding-bottom: 20px;  padding-top: 10px;">
+                    <h3>ACCESSIBILITY</h3>
+                </div>
+                <div>
+                    <p>
+                        The game was thought to be <span class="text-highlight">playable by people with visual or/and audio impairing disabilities</span>. 
+                    </p>
+                    <p>
+                        Within the game, visual, audio and haptic feedback allow the player to figure out the ghost's position. 
+                    </p>
+                    <p>
+                        Outside of the game, the crafted slingshot controller has an adjustable height,  allowing people in 
+                        wheelchair to play, and a "one-button" mode (to facilitate inputs) has been prototyped but not fully developed.
+                    </p>
+                </div>
+                <!-- Gallery -->
+                <div style="padding-bottom: 20px;  padding-top: 10px;">
+                    <h3>GALLERY</h3>
+                </div>        
+                <div>
+                    <img src="/img/video-games/slinghost/slinghost1.png" style="padding-bottom: 20px; padding-top: 20px; display:block; margin-left:auto; margin-right:auto;">
+                    <img src="/img/video-games/slinghost/slinghost2.png" style=" width:86%; padding-bottom: 20px; padding-top: 20px; display:block; margin-left:auto; margin-right:auto;">
+                </div>
+                
+                <div style="padding-bottom: 40px;"></div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="div-row other-projects" id="other-projects"></section>
+
+    <footer id="footer"></footer>
+
+    <script src="/data/video-games.js"></script>
+    <script src="/js/components/navbar.js"></script>
+    <script src="/js/components/footer.js"></script>
+    <script src="/js/components/other-projects.js"></script>
+    <script src="/js/next-vg.js"></script>
+</body>
+</html>

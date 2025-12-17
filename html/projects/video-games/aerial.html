@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marion Pobelle - Aerial</title>
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/text.css">
+    <link rel="stylesheet" href="/css/page-specific-project.css">
+    <link rel="stylesheet" href="/css/project-window.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="grid grid-header"></div>
+
+    <navbar id="navbar"></navbar>  
+    
+    <div class="grid grid-index-1"></div>
+    <section class="landing-section">
+        <h1>Personal Projects</h1>
+    </section>
+
+    <section class="game-section">
+        <div class="game-div">
+            <h1 class="game-title-h1">Aerial</h1>
+            <div class="game-info">
+                <div>
+                    <p>
+                        <span class="text-highlight">Platform: </span>PC
+                        <br><span class="text-highlight">Duration: </span>2 months
+                        <br><span class="text-highlight">Team size: </span>3
+                        <br><span class="text-highlight">Role: </span>Programmer
+                    </p> 
+                </div>
+                <div class="div-column">
+                    <a class="better-button" href="https://codalab.lisn.upsaclay.fr/competitions/573" target="_blank" style="margin-bottom:20px;">Challenge page</a>
+                </div>
+            </div>
+            <div>
+                <p>All screenshots and videos reflect the work of the entire team (art, code, audio, design…)</p>
+            </div>
+            <div>
+                <!-- Overview -->
+                <div style="padding-bottom: 20px; padding-top: 10px;">
+                    <h3>OVERVIEW</h3>
+                </div>
+                <div>
+                    <p>The Aerial Image Recognition Challenge revolves around <span class="text-highlight">sorting different landscape images</span> ranging from beaches, lakes, forests, meadows and more.</p>
+                    <div>
+                        <p><span class="text-highlight">My duties included:</span>
+                            <ul>
+                                <li class="nicer-text">Research possible models for the task (RandomForest, ResNet, Convolutional Neural Networks...)</li>
+                                <li class="nicer-text">Prepare data</li>
+                                <li class="nicer-text">Implement preprocessing strategies</li>
+                                <li class="nicer-text">Train the model</li>
+                                <li class="nicer-text">And more!</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+                <!-- Specific Section -->
+                <div style="padding-bottom: 20px;  padding-top: 10px;">
+                    <h3>DATA</h3>
+                </div>
+                <div>
+                    <p>
+                        The data is derived from portions of the data set (NWPU-RESISC45) that was originally employed in the Remote Sensing Image Scene 
+                        Classification paper. This data set contains 45 categories, but we only kept 13 out of them as a first pre-processing.
+                    </p>
+                    <img src="/img/video-games/aerial/aerial-data.png" style="padding-bottom: 20px; padding-top: 20px; display:block; margin-left:auto; margin-right:auto;">
+                </div>
+                <!-- Specific Section -->
+                <div style="padding-bottom: 20px;  padding-top: 10px;">
+                    <h3>MODEL & TOOLS</h3>
+                </div>
+                <div>
+                    <p>
+                        We first used an instance of the <span class="text-highlight">ResNet50</span> ('Deep Residual Learning for Image Recognition') model that was pre-trained on the <a class="link-in-text" href="https://www.image-net.org/">ImageNet</a> 
+                        dataset, as the model is very <span class="text-highlight">efficient for visual recognition tasks</span> (therefore a good pick for the Aerial challenge) but <span class="text-highlight">can be very 
+                        difficult to train</span>. 
+                    </p>
+                    <p>
+                        As for our tools, we went with <span class="text-highlight">TensorFlow at first</span>, which worked well with our pre-trained model. In the end, we used <span class="text-highlight">PyTorch</span>, as we had 
+                        never used it and we really <span class="text-highlight">wanted to learn</span> the way the tool operates and as we got the same performances as with TensorFlow.
+                    </p>
+                </div>
+                <!-- Specific Section -->
+                <div style="padding-bottom: 20px;  padding-top: 10px;">
+                    <h3>PRE-PROCESSING</h3>
+                </div>
+                <div>
+                    <p>
+                        All <span class="text-highlight">pre-trained models</span> expect <span class="text-highlight">input images normalized in the same way</span>, i.e. mini-batches of 3-channel RGB images of shape (3 x H x W), where H 
+                        and W are expected to be at least 224. The images have to be loaded into a range of [0, 1] (in order to have small weights for small data entries) 
+                        and then normalized using mean = [0.485, 0.456, 0.406] and std = [0.229, 0.224, 0.225] (both mean and standard deviation with pixels).
+                    </p>
+                    <p>
+                        For that reason, we made the images from <span class="text-highlight">our datasets look the same way as the images from the ImageNet dataset</span>, which was used to <span class="text-highlight">pre-train the ResNet50 model</span> we used.
+                    </p>
+                    <p>
+                        <span class="text-highlight">When instancing</span> our model, we used the <span class="text-highlight">torchvision.transforms.Random</span> feature of PyTorch to <span class="text-highlight">change the data</span> a little bit. This <span class="text-highlight">prevents overfitting</span> by training on slightly different data each iteration.
+                    </p>
+                </div>
+                <!-- Specific Section -->
+                <div style="padding-bottom: 20px;  padding-top: 10px;">
+                    <h3>TRAINING & RESULTS</h3>
+                </div>
+                <div>
+                    <p>
+                        We trained our network with around <span class="text-highlight">45 epochs</span>, high enough to get good results but low enough to <span class="text-highlight">avoid overfitting</span> and for our algorithm to <span class="text-highlight">generalize better</span>. 
+                        We obtained stable results for our loss and accuracy: our accuracy hovered around 0.96, 0.98 for our training and validation datasets and our loss kept under 1.8.
+                    </p>
+                    <p>
+                        Both <span class="text-highlight">loss and accuracy</span> curves are pretty <span class="text-highlight">similar for both training and validation sets</span>, hinting that there isn’t any overfitting taking place.
+                    </p>
+                    <img src="/img/video-games/aerial/aerial-lossac_pretrained.png" style="padding-bottom: 20px; padding-top: 20px; display:block; margin-left:auto; margin-right:auto;">
+                    <p>
+                        As the <span class="text-highlight">pretrained ResNet50 model was performing well</span>, we decided to <span class="text-highlight">recreate its architecture but without any pretrained weights</span>. 
+                        Once again we obtained great results on loss and accuracy.
+                    </p>
+                    <img src="/img/video-games/aerial/aerial-lossac_untrained.png" style="padding-bottom: 20px; padding-top: 20px; display:block; margin-left:auto; margin-right:auto;">
+                </div>
+                <!-- More -->
+                <div style="padding-bottom: 20px;  padding-top: 10px;">
+                    <h3>MORE</h3>
+                </div>
+                <div style="padding-bottom: 40px;">
+                    <p>I am also a founder of the <span class="text-highlight">Pachamama challenge</span>. You can check it out here: <a class="link-in-text" href="https://codalab.lisn.upsaclay.fr/competitions/1447">CodaLab Pachamama Challenge</a>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="div-row other-projects" id="other-projects"></section>
+
+    <footer id="footer"></footer>
+
+    <script src="/data/video-games.js"></script>
+    <script src="/js/components/navbar.js"></script>
+    <script src="/js/components/footer.js"></script>
+    <script src="/js/components/other-projects.js"></script>
+    <script src="/js/next-vg.js"></script>
+</body>
+</html>

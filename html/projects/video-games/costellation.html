@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marion Pobelle - Costellation</title>
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/text.css">
+    <link rel="stylesheet" href="/css/page-specific-project.css">
+    <link rel="stylesheet" href="/css/project-window.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="grid grid-header"></div>
+
+    <navbar id="navbar"></navbar>  
+    
+    <div class="grid grid-index-1"></div>
+    <section class="landing-section">
+        <h1>Personal Projects</h1>
+    </section>
+
+    <section class="game-section">
+        <div class="game-div">
+            <h1 class="game-title-h1">Costellation</h1>
+            <div class="game-info">
+                <div>
+                    <p>
+                        <span class="text-highlight">Platform: </span>PC
+                        <br><span class="text-highlight">Duration: </span>4 days
+                        <br><span class="text-highlight">Team size: </span>9
+                        <br><span class="text-highlight">Role: </span>Programmer
+                    </p> 
+                </div>
+                <div class="div-column">
+                    <a class="better-button" href="https://zizelexe.itch.io/co-stellation" target="_blank" style="margin-bottom:20px;">Find on Itch.io</a>
+                </div>
+            </div>
+            <div>
+                <p>All screenshots and videos reflect the work of the entire team (art, code, audio, design…)</p>
+            </div>
+            <div>
+                <!-- Overview -->
+                <div style="padding-bottom: 20px; padding-top: 10px;">
+                    <h3>OVERVIEW</h3>
+                </div>
+                <div>
+                    <p>
+                        Take a little break from your hectic day to gaze at the stars!
+                    </p>
+                    <p>
+                        Costellation is the result of a <span class="text-highlight">3 and a half day workshop</span> with the objective to create an <span class="text-highlight">interactive experience with basic inputs 
+                        (keyboard, mouse, joystick) but outputs would not be limited to a computer screen</span>.
+                    </p>
+                    <div class="div-row" style="width: 100%; height: 100%; margin-bottom: 30px;">
+                        <iframe class="video-trailer" src="https://www.youtube.com/embed/-Ndb7TmDYDI?si=4ZRnhDkywgcYM6fm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allow="fullscreen"></iframe>
+                    </div>
+                    <div>
+                        <p><span class="text-highlight">My duties included:</span>
+                            <ul>
+                                <li class="nicer-text">Develop gameplay features (sky generation, constellation creation…)</li>
+                                <li class="nicer-text">Asset integration (2D sprites, animations…)</li>
+                                <li class="nicer-text">Performance control and optimization</li>
+                                <li class="nicer-text">Collaborating closely with environment artists, sound designers and game designers</li>
+                                <li class="nicer-text">Maintain a feature list with regular updates so that everyone can track progress</li>
+                                <li class="nicer-text">And more!</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+                <!-- Specific Section -->
+                <div style="padding-bottom: 20px;  padding-top: 10px;">
+                    <h3>STRUCTURE</h3>
+                </div>
+                <div>
+                    <p>
+                        Using <span class="text-highlight">a projector, a mirror, leds and scraps</span>, we built a tent that immerses the player in the atmosphere of an evening watching the starry sky.
+                    </p>
+                    <img src="/img/video-games/costellation/costellation-structure.jpg" style="width: 60%; display:block; margin-left:auto; margin-right:auto; padding-bottom: 20px; padding-top: 20px;">
+                    <p>
+                        The experience isn't limited to observation: the player also has a joystick that they can use to draw their own constellations! Placed in the tent, 
+                        a notebook allows players to draw and name their creation, so that future players can find it.
+                    </p>
+                </div>
+                <!-- Specific Section -->
+                <div style="padding-bottom: 20px;  padding-top: 10px;">
+                    <h3>GAMEPLAY</h3>
+                </div>
+                <div>
+                    <p>
+                        To <span class="text-highlight">create a constellation</span>, the player uses a <span class="text-highlight">Xbox controller</span>. They can move around with the left stick, create a new constellation segment and 
+                        cancel their last segment. Each time someone creates a new constellation, its opacity diminishes so that it can be seen but does not disturb 
+                        the next player when they create their own.
+                    </p>
+                    <p>
+                        The cursor is programmed to have <span class="text-highlight">free movements but snaps to the closest star to make it easier</span> for players to select their next star.
+                    </p>
+                    <p>
+                        We used LineRenderers for the constellation segments, as well as to preview a segment before creating it with a specific material, width, and color.
+                    </p>
+                    <p>
+                        Pressing A and <span class="text-highlight">finishing a constellation sends a message to an Arduino board that lights up a few LEDs</span> hooked above the tent, for a nice visual feedback.
+                    </p>
+                    <div class="div-row" style="width: 100%; height: 100%; margin-bottom: 30px;">
+                        <iframe class="video-trailer" src="https://www.youtube.com/embed/aCnoyDELP9s?si=XFbz2D-KxRm08DlQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allow="fullscreen"></iframe>
+                    </div>
+                </div>
+                <!-- Gallery -->
+                <div style="padding-bottom: 20px;  padding-top: 10px;">
+                    <h3>GALLERY</h3>
+                </div>
+                <p>
+                    We left the game to run in one of the school's rooms on the Friday afternoon following the workshop. Here's the result and some of the drawings!
+                </p>        
+                <div class="div-row" style="width: 100%; gap: 20px; padding-bottom: 20px;">
+                    <img class="gallery-image" src="/img/video-games/costellation/costellation1.jpg" style="width: 36%;">
+                    <div class="div-column">
+                        <div class="div-row" style="width: 100%; gap: 20px; padding-bottom: 20px;">
+                            <img class="gallery-image" src="/img/video-games/costellation/costellation2.jpg" style="width: 49%;">
+                            <img class="gallery-image" src="/img/video-games/costellation/costellation3.jpg" style="width: 49%;">
+                        </div>
+                        <div class="div-row" style="width: 100%; gap: 20px; padding-bottom: 20px;">
+                            <img class="gallery-image" src="/img/video-games/costellation/costellation4.jpg" style="width: 49%;">
+                            <img class="gallery-image" src="/img/video-games/costellation/costellation5.jpg" style="width: 49%;">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- More -->
+                <div style="padding-bottom: 20px;  padding-top: 10px;">
+                    <h3>MORE</h3>
+                </div>
+                <div style="padding-bottom: 40px;">
+                    <p>Costellation was presented during the <span class="text-highlight">2024 edition of the “Les Mycéliades” festival</span> held at the Alpha media-library in Angoulême.</p>
+                    <img src="/img/video-games/costellation/costellation-myceliades.jpg" style="width: 60%; display:block; margin-left:auto; margin-right:auto; padding-bottom: 20px; padding-top: 20px;">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="div-row other-projects" id="other-projects"></section>
+
+    <footer id="footer"></footer>
+
+    <script src="/data/video-games.js"></script>
+\    <script src="/js/components/navbar.js"></script>
+    <script src="/js/components/footer.js"></script>
+    <script src="/js/components/other-projects.js"></script>
+    <script src="/js/next-vg.js"></script>
+</body>
+</html>

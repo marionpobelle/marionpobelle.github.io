@@ -1,0 +1,91 @@
+#project-section {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px 0px 15px 0;
+    width: 50%;
+    padding: 0 15px;
+}
+
+#about-section {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0 10px;
+}
+
+#about-section div {
+    margin-bottom: 10px;
+}
+
+#about-section h3 {
+    padding-bottom: 10px;
+}
+
+.grid-index-1 {
+    bottom: 0vw;
+}
+
+#index-main-section {
+    width: 75%;
+}
+
+@media screen and (max-width: 1000px) {
+    #about-section {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    #about-section div {
+        width: 30%;
+        height: fit-content;
+        text-align: justify;
+    }
+    #index-main-section {
+        flex-direction: column;
+    }
+    #project-section {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #about-section {
+        width: 100%;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    #about-section div {
+        width: 100%;
+        height: fit-content;
+        text-align: justify;
+    }
+    #project-section {
+        padding: 0 10px;
+    }
+}
+
+.project-window2 {
+    height: auto;
+    padding-top: 50px;
+    color: var(--light-color);
+}
+
+.profile-picture {
+    width: 30%;
+    margin: 40px 5px 25px 0px;
+}
+
+.nameplate {
+    font-size: 30px;
+    line-height: 60px;
+    font-family: "Cy Grotesk", sans-serif;
+    font-weight: 600;
+}
+
+.intro-title {
+    margin:auto;
+}

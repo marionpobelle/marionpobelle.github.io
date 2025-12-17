@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marion Pobelle - Ar Mare</title>
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/text.css">
+    <link rel="stylesheet" href="/css/page-specific-project.css">
+    <link rel="stylesheet" href="/css/project-window.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="grid grid-header"></div>
+
+    <navbar id="navbar"></navbar>  
+    
+    <div class="grid grid-index-1"></div>
+    <section class="landing-section">
+        <h1>Personal Projects</h1>
+    </section>
+
+    <section class="game-section">
+        <div class="game-div">
+            <h1 class="game-title-h1">Ar Mare</h1>
+            <div class="game-info">
+                <div>
+                    <p>
+                        <span class="text-highlight">Platform: </span>PC
+                        <br><span class="text-highlight">Duration: </span>6 months
+                        <br><span class="text-highlight">Team size: </span>10
+                        <br><span class="text-highlight">Role: </span>Programmer
+                    </p> 
+                </div>
+                <div class="div-column">
+                    <a class="better-button" href="https://corail.itch.io/ar-mare" target="_blank" style="margin-bottom:20px;">Find on Itch.io</a>
+                </div>
+            </div>
+            <div>
+                <p>All screenshots and videos reflect the work of the entire team (art, code, audio, design…)</p>
+            </div>
+            <div>
+                <!-- Overview -->
+                <div style="padding-bottom: 20px; padding-top: 10px;">
+                    <h3>OVERVIEW</h3>
+                </div>
+                <div>
+                    <p>
+                        Set in 1920 off the coasts of Brittany, Ar-Mare follows Morgan Le Duienn, a fisher-woman turned light-keeper. After the Great War, which spurs her 
+                        to escape France’s new policies, she takes up the job at the Ar-Mare lighthouse only to immediately find out that the place is not what it seemsー 
+                        and thus begins the nightmare. The game tells a story of loneliness and of one-sided, abusive love, and ownership.
+                    </p>
+                    <p>
+                        This game experience is a <span class="text-highlight">proof of concept</span> developed as part of our second-year master's program at ENJMIN over six months. It is therefore far from 
+                        perfect, but it includes all the <span class="text-highlight">key elements</span> that make up this <span class="text-highlight">beautiful and scary experience</span>.
+                        <br>This build contains 2 days of gameplay, with 3 tasks each day and 2 main puzzles.
+                    </p>
+                    <div class="div-row" style="width: 100%; height: 100%; margin-bottom: 30px;">
+                        <iframe class="video-trailer" src="https://www.youtube.com/embed/_nROUUAogPM?si=bM8mlEE6l-cXcbsE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allow="fullscreen"></iframe>
+                    </div>
+                    <div>
+                        <p><span class="text-highlight">My duties included:</span>
+                            <ul>
+                                <li class="nicer-text">Develop gameplay features (player controller, interactions…)</li>
+                                <li class="nicer-text">Implement User Interface (design menus, set up navigation…)</li>
+                                <li class="nicer-text">Asset integration (User Interface, 3D models, animations…)</li>
+                                <li class="nicer-text">Improve the game designer’s work environment with homemade tools (Google Sheet)</li>
+                                <li class="nicer-text">Performance control and optimization</li>
+                                <li class="nicer-text">Collaborating closely with environment artists, sound designers and game designers</li>
+                                <li class="nicer-text">Maintain a feature list with regular updates so that everyone can track progress</li>
+                                <li class="nicer-text">Writing technical documentation (risk assessment sheet, performance budget sheet…)</li>
+                                <li class="nicer-text">And more!</li>
+                            </ul>
+                        </p>
+                        <p>
+                            As one of the primary point of contact for the rest of the team, I created and maintained the game’s feature list and documentation. After that, 
+                            <span class="text-highlight">I detailed the structure of each feature on paper, prototyped them, processed the team’s feedback as I went, and then worked on and owned them until polished.</span>
+                        </p>
+                        <p>
+                            Some of my teammates wanted to learn scripting, so I did my best to help them, be available and allow them to implement small features themselves.
+                        </p>
+                    </div>
+                </div>
+                <!-- Specific Section -->
+                <div style="padding-bottom: 20px;  padding-top: 10px;">
+                    <h3>TASK & EVENT SYSTEM</h3>
+                </div>
+                <div>
+                    <p>
+                        One of the <span class="text-highlight">main challenges</span> of Ar Mare was the designing and application process of the level design, as a linear game with <span class="text-highlight">in-game events occurring 
+                        at a specific time / context</span>. The goal was to make the <span class="text-highlight">iteration pipeline the simplest possible for the designers</span> and to have a solid way of <span class="text-highlight">managing 
+                        the different events and what triggers them</span>.
+                    </p>
+                    <p>
+                        <span class="text-highlight">Google sheet</span> was used as an external tool to <span class="text-highlight">manage the data of the events</span>. It dictates which trigger will activate which receiver. Moreover it can 
+                        apply some modifiers to the way an event occurs such as order, how many triggers are needed, or how many times the event can be triggered.
+                    </p>
+                    <img src="/img/video-games/ar-mare/armare-firstevents.png" style=" width:100%; padding-bottom: 20px; padding-top: 20px; display:block; margin-left:auto; margin-right:auto;">
+                    <p style="text-align: center;">The game’s first day events.</p>
+                    <p>
+                        Each day’s event sheet has an object sheet linked to it to see all objects present in the corresponding map.  
+                    </p>
+                    <p>
+                        To implement the <span class="text-highlight">triggers/receiver logic</span>, we used the <span class="text-highlight">actor components</span> of Unreal which let us add them to whatever actor we want. And thus implement their 
+                        behavior to its owner actor. We also use them to detect the triggering and receiving actors of the scene, and send it to the Google sheet. 
+                    </p>
+                    <img src="/img/video-games/ar-mare/armare-triggerreceiver.png" style=" width:50%; padding-bottom: 20px; padding-top: 20px; display:block; margin-left:auto; margin-right:auto;">
+                    <p style="text-align: center;">Trigger and receiver actors.</p>
+                    <p>
+                        <span class="text-highlight">The event trigger implements a simple “Trigger” and “Untrigger” function, to be called when the trigger actor is activated. The event receiver implements a delegate 
+                        “OnReceiverActivated” called when the event is activated.</span>
+                    </p>
+                    <p>
+                        To <span class="text-highlight">retrieve the data from the Google sheet</span>, we use a <span class="text-highlight">Http request</span> to download the .tsv and then <span class="text-highlight">parse the info</span> into the events.
+                    </p>
+                    <img src="/img/video-games/ar-mare/armare-actorssetup.png" style=" width:70%; padding-bottom: 20px; padding-top: 20px; display:block; margin-left:auto; margin-right:auto;">
+                    <p style="text-align: center;">Setting the Actors for the Google Sheet events.</p>
+                    <p>
+                        After getting the information in the event data we search for each actor linked to an event to add its name to the list of the event. We have to do this because Unreal 
+                        has a system of names and labels. <span class="text-highlight">Labels are the actors’ names we see and names are the actors’ true names</span>. The difficulty is that the <span class="text-highlight">label names (that we use to display 
+                        actors in the Google sheet) are not loaded to the game’s build</span>. So we have to <span class="text-highlight">get each actor’s true name and save them in the data</span> before we play or build the game.
+                    </p>
+                    <p>
+                        Then, when we play the game, <span class="text-highlight">we iterate through the saved names (and not labels)</span> to link the actors to the events.
+                    </p>
+                    <img src="/img/video-games/ar-mare/armare-geteventdata.png" style=" width:70%; padding-bottom: 20px; padding-top: 20px; display:block; margin-left:auto; margin-right:auto;">
+                    <p style="text-align: center;">Get data for each event.</p>
+                </div>
+                <!-- Specific Section -->
+                <div style="padding-bottom: 20px;  padding-top: 10px;">
+                    <h3>TECHNICAL DOCUMENTATION</h3>
+                </div>
+                <div>
+                    <p>
+                        I was responsible for writing some <span class="text-highlight">technical documentation</span> to ensure a proper workflow throughout the project's allocated time. I mainly focused on writing a risk 
+                        assessment sheet and a performance budget sheet.
+                    </p>
+                    <p>
+                        The <span class="text-highlight">risk assessment sheet</span> encompassed every discipline within the team and focused on <span class="text-highlight">prevention over post-resolution</span>. The procedure was as follows:
+                        <br>The first step was to identify a problem, its consequences, and which category it needed to be affected in. Then, I computed its impact on development 
+                        as well as its probability of happening. Finally, I established a prevention strategy as well as a main prevention action. As an example:
+                        <ul>
+                            <li class="nicer-text"><span class="text-highlight">Problem</span>: Recording the voice acting too early or too late.</li>
+                            <li class="nicer-text"><span class="text-highlight">Consequences</span>: Potentially missing audio assets or not enough time to work on flagging or processing.</li>
+                            <li class="nicer-text"><span class="text-highlight">Category</span>: Audio.</li>
+                            <li class="nicer-text"><span class="text-highlight">Impact</span>: High.</li>
+                            <li class="nicer-text"><span class="text-highlight">Probability</span>: 50%.</li>
+                            <li class="nicer-text"><span class="text-highlight">Prevention Strategy</span>: Think early about a limit date for recording the voice actor.ress that takes into account the voice processing, subtitle flagging and integration.</li>
+                            <li class="nicer-text"><span class="text-highlight">Prevention Action</span>: Find the voice actor.ress in advance, find out their availability and set the final list for voice lines not too early to allow time for changes but not too late for the recording sessions.</li>
+                        </ul>
+                    </p>
+                    <p>
+                        The <span class="text-highlight">performance budget sheet</span> was intended to put <span class="text-highlight">bounds and methods to author data and volumetry of assets</span>. It was centered around fixing limits as well 
+                        as describing tools for measuring and profiling. Here are all the guideline subjects that were considered:
+                    </p>
+                    <img src="/img/video-games/ar-mare/armare-risktoc.png" style=" width:50%; padding-bottom: 20px; padding-top: 20px; display:block; margin-left:auto; margin-right:auto;">
+                    <p>
+                        To determine our target platform, I benchmarked several games that were similar to ours.
+                    </p>
+                    <img src="/img/video-games/ar-mare/armare-target.png" style=" width:50%; padding-bottom: 20px; padding-top: 20px; display:block; margin-left:auto; margin-right:auto;">
+                    <p>
+                        I read a lot of research articles and consulted with the teachers who supervised us for the project to figure out the polycount in games and assets in general.
+                    </p>
+                    <img src="/img/video-games/ar-mare/armare-polycount.png" style=" width:50%; padding-bottom: 20px; padding-top: 20px; display:block; margin-left:auto; margin-right:auto;">
+                </div>
+                <!-- Gallery -->
+                <div style="padding-bottom: 20px;  padding-top: 10px;">
+                    <h3>GALLERY</h3>
+                </div>        
+                <div class="div-row" style="width: 100%; gap: 20px; padding-bottom: 20px;">
+                    <img class="gallery-image" src="/img/video-games/ar-mare/armare1.png" style="width: 49%;">
+                    <img class="gallery-image" src="/img/video-games/ar-mare/armare2.png" style="width: 49%;">
+                </div>
+                <div class="div-row" style="width: 100%; gap: 20px; padding-bottom: 20px;">
+                    <img class="gallery-image" src="/img/video-games/ar-mare/armare3.png" style="width: 49%;">
+                    <img class="gallery-image" src="/img/video-games/ar-mare/armare4.png" style="width: 49%;">
+                </div>
+
+                <div style="padding-bottom: 40px;"></div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="div-row other-projects" id="other-projects"></section>
+
+    <footer id="footer"></footer>
+
+    <script src="/data/video-games.js"></script>
+    <script src="/js/components/navbar.js"></script>
+    <script src="/js/components/footer.js"></script>
+    <script src="/js/components/other-projects.js"></script>
+    <script src="/js/next-vg.js"></script>
+</body>
+</html>
