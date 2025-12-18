@@ -10,7 +10,7 @@ var html = `
         <img src="../../../img/icons/itchio-icon.png" alt="" onmouseover="this.src='../../../img/icons/itchio-icon-hovered.png'" onmouseout="this.src='../../../img/icons/itchio-icon.png';" class="icon-social-media">
     </a>
 
-    <a href="www.linkedin.com/in/marion-pobelle" target="_blank">
+    <a href="https://www.linkedin.com/in/marion-pobelle-07639224b/" target="_blank">
         <img src="../../../img/icons/linkedin-icon.png" alt="" onmouseover="this.src='../../../img/icons/linkedin-icon-hovered.png'" onmouseout="this.src='../../../img/icons/linkedin-icon.png';" class="icon-social-media">
     </a>
 </div>

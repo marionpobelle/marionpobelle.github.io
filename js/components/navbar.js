@@ -1,7 +1,7 @@
 var html = `
 <link rel="stylesheet" href="/css/navbar.css">
 <div id="background-navbar"></div>
-<ul class="nav-ul">
+<ul class="nav-ul" id="nav-ul">
     <li class="nav-link" id="home"><a href="/index.html">Home</a></li>
     <li class="nav-link" id="profprojects"><a href="/html/projects/professional-projects.html">Professional projects</a></li>
     <li class="nav-link" id="persoprojects"><a href="/html/projects/personal-projects.html">Personal projects</a></li>
