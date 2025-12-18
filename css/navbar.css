@@ -54,3 +54,25 @@ navbar {
   background-color: var(--light-color);
   border: solid var(--dark-color) 1.5px;
 }
+
+@media screen and (max-width: 1000px) {
+    #nav-ul  {
+        width: 100%;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    #background-navbar {
+        height: 209px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #nav-ul  {
+        width: 100%;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    #background-navbar {
+        height: 209px;
+    }
+}

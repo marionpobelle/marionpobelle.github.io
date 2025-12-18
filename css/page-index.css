@@ -50,6 +50,16 @@
     #project-section {
         width: 100%;
     }
+    #about-buttons  {
+        width: 100%;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    #skill-vignets  {
+        width: 100%;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -65,6 +75,16 @@
     }
     #project-section {
         padding: 0 10px;
+    }
+    #about-buttons  {
+        width: 100%;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    #skill-vignets  {
+        width: 100%;
+        flex-direction: column;
+        justify-content: space-evenly;
     }
 }
 
