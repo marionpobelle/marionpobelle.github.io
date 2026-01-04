@@ -131,23 +131,143 @@
                         detection system identifies whether an animal or plant is in the picture</span>. If a species that has never been photographed is detected, the 
                         phrase “New species discovered” will be displayed.
                     </p>
-                    <img src="/img/video-games/along-the-swamp/swamp-CapturePhoto.png" style="width: 50%; padding-bottom: 20px; padding-top: 20px;">
                     <p>
                         To capture a picture: we remove the HUD and make a Texture2D out of the screen.
                     </p>
+                    <!-- Code Section -->
+                    <div class="card">
+  <div class="titlebar">
+    <span class="buttons">
+    <button class="minimize">
+			<svg x="0px" y="0px" viewBox="0 0 10.2 1"><rect x="0" y="50%" width="10.2" height="1"></rect></svg>
+		</button>
+    <button class="maximize">
+			<svg viewBox="0 0 10 10"><path d="M0,0v10h10V0H0z M9,9H1V1h8V9z"></path></svg>
+		</button>
+    <button class="close">
+			<svg viewBox="0 0 10 10"><polygon points="10.2,0.7 9.5,0 5.1,4.4 0.7,0 0,0.7 4.4,5.1 0,9.5 0.7,10.2 5.1,5.8 9.5,10.2 10.2,9.5 5.8,5.1"></polygon></svg>
+		</button>
+    </span>
+  </div>
+  <div class="cppcode">
+    <pre id="pre">
+        <code>
+<span class="cred">private</span> IEnumerator <span class="cpur">CapturePhoto()</span> 
+{
+    _viewingPhoto <span class="cblu">= true</span>;
+    _hudElements.<span class="cpur">SetActive</span>(<span class="cblu">false</span>);
+    _cameraUI.<span class="cpur">SetActive</span>(<span class="cblu">false</span>);
+    <span class="cred">yield return new</span> WaitForEndOfFrame();
+    Rect regionToRead <span class="cblu">=</span> <span class="cred">new</span> Rect(<span class="cblu">0</span>, <span class="cblu">0</span>, Screen.width, Screen.height);
+    _screenCapture.<span class="cpur">ReadPixels</span>(regionToRead, <span class="cblu">0</span>, <span class="cblu">0</span>, <span class="cblu">false</span>);
+    _screenCapture.<span class="cpur">Apply</span>();
+    StartCoroutine(CameraFlashEffect());
+    <span class="cred">yield return new</span> WaitForSeconds(<span class="cblu">0.5f</span>);
+    _currentAmountPhotos<span class="cblu">++</span>;
+    UIHandler.Instance.NotificationPicture.<span class="cpur">SetActive</span>(<span class="cblu">true</span>);
+    FindVisiblePlantTargets();
+    FindVisibleAnimalTargets();
+    ShowPhoto();
+}
+        </code>
+    </pre>
+  </div>
+</div>
+                    <!-- END Code Section -->
                     <p>
                         <span class="text-highlight">To show a picture</span>: we <span class="text-highlight">make a Sprite out of the Texture2D we got from the captured screen</span>, and we display a version of this Sprite to the 
                         screen as well as save another one for the notebook.
                         <br>We save the <span class="text-highlight">Sprite with the screen’s dimensions</span>, the <span class="text-highlight">polaroid format</span> will be ensured through <span class="text-highlight">UI masks</span>.
                     </p>
-                    <img src="/img/video-games/along-the-swamp/swamp-ShowPhoto.png" style="width: 100%; padding-bottom: 20px; padding-top: 20px;">
+                    <!-- Code Section -->
+                    <div class="card">
+  <div class="titlebar">
+    <span class="buttons">
+    <button class="minimize">
+			<svg x="0px" y="0px" viewBox="0 0 10.2 1"><rect x="0" y="50%" width="10.2" height="1"></rect></svg>
+		</button>
+    <button class="maximize">
+			<svg viewBox="0 0 10 10"><path d="M0,0v10h10V0H0z M9,9H1V1h8V9z"></path></svg>
+		</button>
+    <button class="close">
+			<svg viewBox="0 0 10 10"><polygon points="10.2,0.7 9.5,0 5.1,4.4 0.7,0 0,0.7 4.4,5.1 0,9.5 0.7,10.2 5.1,5.8 9.5,10.2 10.2,9.5 5.8,5.1"></polygon></svg>
+		</button>
+    </span>
+  </div>
+  <div class="cppcode">
+    <pre id="pre">
+        <code>
+<span class="cred">private</span> void <span class="cpur">ShowPhoto()</span> 
+{
+    Sprite photoSprite <span class="cblu">=</span> Sprite.<span class="cpur">Create</span>(_screenCapture, <span class="cred">new</span> Rect(<span class="cblu">0.0f</span>, <span class="cblu">0.5f</span>, _screenCapture.width, _screenCapture.height), <span class="cred">new</span> Vector2(<span class="cblu">0.5f</span>, <span class="cblu">0.5f</span>), <span class="cblu">100.0f</span>);
+    _photoDisplayArea.sprite <span class="cblu">=</span> photoSprite;
+
+    Texture2D copyTexture <span class="cblu">=</span> <span class="cred">new</span> Texture2D(_screenCapture.width, _screenCapture.height);
+    copyTexture.<span class="cpur">SetPixels</span>(_screenCapture.<span class="cpur">GetPixels</span>());
+    copyTexture.<span class="cpur">Apply</span>();
+    Sprite newPhotoSprite <span class="cblu">=</span> Sprite.<span class="cpur">Create</span>(copyTexture, <span class="cred">new</span> Rect(<span class="cblu">0.0f</span>, <span class="cblu">0.0f</span>, copyTexture.width, copyTexture.height), <span class="cred">new</span> Vector2(<span class="cblu">0.5f</span>, <span class="cblu">0.5f</span>), <span class="cblu">100.0f</span>);
+    UIHandler.Instance.<span class="cpur">AddPictureToList</span>(newPhotoSprite, (System.DateTime.UtcNow.<span class="cpur">ToLocalTime</span>().<span class="cpur">ToString</span>(<span class="cblu">"HH:mm"</span>)));
+    
+    _photoFrame.<span class="cpur">SetActive</span>(<span class="cblu">true</span>);
+    _animator.<span class="cpur">Play</span>(<span class="cblu">"PictureFade_anim"</span>);
+}
+        </code>
+    </pre>
+  </div>
+</div>
+                    <!-- END Code Section -->
                     <p>
                         To find a species on the picture: <span class="text-highlight">each species has an data component</span> attached that contains its information <span class="text-highlight">(name, sprite, description, is 
                         already discovered or not)</span>. When taking a picture, we check if we find within the detection radius of the camera (the part of the screen that 
                         will appear on the polaroid) <span class="text-highlight">objects that are marked as plants or animals through a collision layer</span>. If we find something, we give that information 
                         to the player and register the species data in the notebook.
                     </p>
-                    <img src="/img/video-games/along-the-swamp/swamp-plantdetection.png" style="width: 100%; padding-bottom: 20px; padding-top: 20px;">
+                                        <!-- Code Section -->
+                    <div class="card">
+  <div class="titlebar">
+    <span class="buttons">
+    <button class="minimize">
+			<svg x="0px" y="0px" viewBox="0 0 10.2 1"><rect x="0" y="50%" width="10.2" height="1"></rect></svg>
+		</button>
+    <button class="maximize">
+			<svg viewBox="0 0 10 10"><path d="M0,0v10h10V0H0z M9,9H1V1h8V9z"></path></svg>
+		</button>
+    <button class="close">
+			<svg viewBox="0 0 10 10"><polygon points="10.2,0.7 9.5,0 5.1,4.4 0.7,0 0,0.7 4.4,5.1 0,9.5 0.7,10.2 5.1,5.8 9.5,10.2 10.2,9.5 5.8,5.1"></polygon></svg>
+		</button>
+    </span>
+  </div>
+  <div class="cppcode">
+    <pre id="pre">
+        <code>
+<span class="cred">private</span> void <span class="cpur">FindVisiblePlantTargets()</span> 
+{
+    Collider2D[] targetsInViewRadius <span class="cblu">=</span> Physics2D.<span class="cpur">OverlapBoxAll</span>ll(<span class="cred">new</span> Vector2(_mainCamera.transform.position.x, _mainCamera.transform.position.y), <span class="cred">new</span> Vector2(DetectionRadius, DetectionRadius), <span class="cblu">0</span>, _plantDetectionMask);
+    <span class="cred">foreach</span>(Collider2D plant <span class="cred">in</span> targetsInViewRadius)
+    {
+        PlantData plantData <span class="cblu">=</span> plant.gameObject.GetComponent<span class="cblu"><</span>PlantData<span class="cblu">></span>();
+        <span class="cred">if</span> (plantData <span class="cblu">== null</span>) <span class="cred">continue</span>;
+        <span class="cred">if</span> (plantData.IsDiscovered)
+        {
+            Debug.<span class="cpur">Log</span>(<span class="cblu">"Plant found : " +</span> plantData.PlantName <span class="cblu">+ " was already discovered."</span>);
+            NotebookData.Instance.<span class="cpur">AddPlantDiscoveryCount</span>(plantData.PlantName);
+        }
+        <span class="cred">else</span>
+        {
+            Debug.<span class="cpur">Log</span>(<span class="cblu">"Plant found : " +</span> plantData.PlantName <span class="cblu">+ " has been discovered!"</span>);
+            plantData.IsDiscovered <span class="cblu">= true</span>;
+            NotebookData.Instance.<span class="cpur">AddPlant</span>(plantData.PlantName, plantData.PlantSprite, plantData.PlantDescription);
+            NotebookData.Instance.<span class="cpur">DataUpdate</span>();
+            StartCoroutine(DisplayTextDiscovery(<span class="cblu">"Une nouvelle espèce a été découverte !"</span>));
+            UIHandler.Instance.NotificationPlant.<span class="cpur">SetActive</span>(<span class="cblu">true</span>);
+        }
+    }
+}
+        </code>
+    </pre>
+  </div>
+</div>
+                    <!-- END Code Section -->
                 </div>
                 <!-- Gallery -->
                 <div style="padding-bottom: 20px;  padding-top: 10px;">

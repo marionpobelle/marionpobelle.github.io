@@ -117,7 +117,47 @@
                     <p>
                         To <span class="text-highlight">retrieve the data from the Google sheet</span>, we use a <span class="text-highlight">Http request</span> to download the .tsv and then <span class="text-highlight">parse the info</span> into the events.
                     </p>
-                    <img src="/img/video-games/ar-mare/armare-actorssetup.png" style=" width:70%; padding-bottom: 20px; padding-top: 20px; display:block; margin-left:auto; margin-right:auto;">
+                                        <!-- Code Section -->
+                    <div class="card">
+  <div class="titlebar">
+    <span class="buttons">
+    <button class="minimize">
+			<svg x="0px" y="0px" viewBox="0 0 10.2 1"><rect x="0" y="50%" width="10.2" height="1"></rect></svg>
+		</button>
+    <button class="maximize">
+			<svg viewBox="0 0 10 10"><path d="M0,0v10h10V0H0z M9,9H1V1h8V9z"></path></svg>
+		</button>
+    <button class="close">
+			<svg viewBox="0 0 10 10"><polygon points="10.2,0.7 9.5,0 5.1,4.4 0.7,0 0,0.7 4.4,5.1 0,9.5 0.7,10.2 5.1,5.8 9.5,10.2 10.2,9.5 5.8,5.1"></polygon></svg>
+		</button>
+    </span>
+  </div>
+  <div class="cppcode">
+    <pre id="pre">
+        <code>
+<span class="cred">public</span> void ALDManager::<span class="cpur">SetLdEventsActors</span>()
+{
+    _ldEvents <span class="cblu">=</span> <span class="cred">new</span> TArray<FLDEventData*>();
+    TArray<span class="cblu"><</span>FLDEventData<span class="cblu">*></span> eventsData;
+    _eventsTable<span class="cblu">-></span>GetAllRows<span class="cblu"><</span>FLDEventData<span class="cblu">></span> (TEXT(<span class="cblu">"EventData"</span>), eventsData);
+    <span class="ccomment">// create new events for the play (to avoid changes on the model)</span>
+    <span class="cred">for</span> (FLDEventData<span class="cblu">*</span> ldEvent <span class="cblu">:</span> eventsData)
+    {
+        int i <span class="cblu">=</span> _ldEvents<span class="cblu">-></span><span class="cpur">Add</span>(<span class="cred">new</span> FLDEventData(<span class="cblu">*</span>ldEvent));
+        FLDEventData<span class="cblu">*</span> newEvent <span class="cblu">=</span> (<span class="cblu">*</span>_ldEvents)[i];
+        <span class="ccomment">// get the triggers and receivers actors with their names</span>
+        newEvent<span class="cblu">-></span>Triggers <span class="cblu">=</span> RetrieveAllObjectsWithComponentInNameArray<span class="cblu"><</span>UEventTrigger<span class="cblu">></span>(ldEvent<span class="cblu">-></span>TriggersName);
+        newEvent<span class="cblu">-></span>ActivatedReceivers <span class="cblu">=</span> RetrieveAllObjectsWithComponentInNameArray<span class="cblu"><</span>UEventReceiver<span class="cblu">></span>(ldEvent<span class="cblu">-></span>ActivatedReceiversName);
+        _eventLogic <span class="cblu">=</span> <span class="cpur">GetGameInstance</span>()<span class="cblu">-></span>GetSubsystem<span class="cblu"><</span>UEventLogicSubSystem<span class="cblu">></span>();
+        _eventLogic<span class="cblu">-></span><span class="cpur">SetupEventTracking</span>(_ldEvents);
+        UE_LOG(LogArMare, Warning, TEXT(<span class="cblu">"Event Actors Set"</span>));
+    }
+}
+        </code>
+    </pre>
+  </div>
+</div>
+                    <!-- END Code Section -->
                     <p style="text-align: center;">Setting the Actors for the Google Sheet events.</p>
                     <p>
                         After getting the information in the event data we search for each actor linked to an event to add its name to the list of the event. We have to do this because Unreal 
@@ -127,7 +167,55 @@
                     <p>
                         Then, when we play the game, <span class="text-highlight">we iterate through the saved names (and not labels)</span> to link the actors to the events.
                     </p>
-                    <img src="/img/video-games/ar-mare/armare-geteventdata.png" style=" width:70%; padding-bottom: 20px; padding-top: 20px; display:block; margin-left:auto; margin-right:auto;">
+                                                            <!-- Code Section -->
+                    <div class="card">
+  <div class="titlebar">
+    <span class="buttons">
+    <button class="minimize">
+			<svg x="0px" y="0px" viewBox="0 0 10.2 1"><rect x="0" y="50%" width="10.2" height="1"></rect></svg>
+		</button>
+    <button class="maximize">
+			<svg viewBox="0 0 10 10"><path d="M0,0v10h10V0H0z M9,9H1V1h8V9z"></path></svg>
+		</button>
+    <button class="close">
+			<svg viewBox="0 0 10 10"><polygon points="10.2,0.7 9.5,0 5.1,4.4 0.7,0 0,0.7 4.4,5.1 0,9.5 0.7,10.2 5.1,5.8 9.5,10.2 10.2,9.5 5.8,5.1"></polygon></svg>
+		</button>
+    </span>
+  </div>
+  <div class="cppcode">
+    <pre id="pre">
+        <code>
+<span class="cred">for</span> (int i <span class="cblu">=</span> 2; i <span class="cblu"><</span> Lines.Num(); i<span class="cblu">++</span>)
+{
+    int index <span class="cblu">=</span> i <span class="cblu">-</span> 2;
+    LdEvents.Add(<span class="cred">new</span> FLDEventData());
+    TArray<FString> Columns;
+    Lines[i].<span class="cpur">ParseIntoArray</span>(Columns, TEXT(<span class="cblu">"\t"</span>), false);
+    <span class="ccomment">//get event's base info</span>
+    LdEvents[index]<span class="cblu">-></span>EventId <span class="cblu">=</span> index;
+    LdEvents[index]<span class="cblu">-></span>EventName <span class="cblu">=</span> Columns[0];
+    LdEvents[index]<span class="cblu">-></span>EventDescription <span class="cblu">=</span> Columns[1];
+    <span class="ccomment">//Get triggers' name of the event</span>
+    TArray<FString> Triggers;
+    Columns[2].<span class="cpur">ParseIntoArray</span>(Triggers, TEXT(<span class="cblu">", "</span>), true);
+    LdEvents[index]<span class="cblu">-></span>TriggersName = Triggers;
+    <span class="ccomment">//Get modifiers of the event</span>
+    LdEvents[index]<span class="cblu">-></span>TimeToWaitInSec <span class="cblu">=</span> FCString::<span class="cpur">Atof</span> (<span class="cblu">*</span><span class="cpur">GetKeyWordVarFromString</span>(<span class="cred">new</span> FString(<span class="cblu">"TimeToWait InSec"</span>), <span class="cblu">&</span>Columns[3])); 
+    LdEvents[index]<span class="cblu">-></span>bDoNeedAllTriggers <span class="cblu">=</span> Columns[3].<span class="cpur">Contains</span>(TEXT(<span class="cblu">"DoNeedAllTriggers"</span>));
+    LdEvents[index]<span class="cblu">-></span>bIsInOrder <span class="cblu">=</span> Columns[3].<span class="cpur">Contains</span>(TEXT(<span class="cblu">"IsInOrder"</span>));
+    LdEvents[index]<span class="cblu">-></span>TriggersNeeded <span class="cblu">=</span> FCString::<span class="cpur">Atoi</span>(<span class="cblu">*</span><span class="cpur">GetKeyWordVarFromString</span>(<span class="cred">new</span> FString(<span class="cblu">"TriggersNeeded"</span>), <span class="cblu">&</span>Columns[3])); 
+    LdEvents[index]<span class="cblu">-></span>bIsSimultaneous <span class="cblu">=</span> Columns[3].<span class="cpur">Contains</span>(TEXT(<span class="cblu">"IsSimultaneous"</span>));
+    LdEvents[index]<span class="cblu">-></span>NumberOfTriggers <span class="cblu">=</span> FCString::<span class="cpur">Atoi</span>(<span class="cblu">*</span><span class="cpur">GetKeyWordVarFromString</span>(<span class="cred">new</span> FString(<span class="cblu">"NumberOfTriggers"</span>), <span class="cblu">&</span>Columns[3])); 
+    <span class="ccomment">//Get activated receivers' name of the event</span>
+    TArray<FString> ActivatedEffects;
+    Columns[4].<span class="cpur">ParseIntoArray</span>(ActivatedEffects, TEXT(<span class="cblu">", "</span>), true); 
+    LdEvents[index]<span class="cblu">-></span>ActivatedReceiversName <span class="cblu">=</span> ActivatedEffects;
+}
+        </code>
+    </pre>
+  </div>
+</div>
+                    <!-- END Code Section -->
                     <p style="text-align: center;">Get data for each event.</p>
                 </div>
                 <!-- Specific Section -->
