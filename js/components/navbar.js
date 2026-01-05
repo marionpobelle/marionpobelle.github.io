@@ -7,6 +7,7 @@ var html = `
     <li class="nav-link" id="persoprojects"><a href="/html/projects/personal-projects.html">Personal projects</a></li>
     <li class="nav-link" id="about"><a href="/html/about.html">About</a></li>
     <li class="nav-link" id="resume"><a href="/html/resume.html">Resume</a></li>
+    <li class="nav-link" id="blog"><a href="/html/projects/blog.html">Blog</a></li>
 </ul>`
 
 document.getElementById("navbar").innerHTML = html;
@@ -45,5 +46,12 @@ else if(window.location.pathname.endsWith('/personal-projects.html')
 )
 {
     navElem = document.getElementById("persoprojects");
+    navElem.className += " active"; 
+}
+else if(window.location.pathname.endsWith('/nds-reshell.html')
+|| window.location.pathname.endsWith('/blog.html')
+)
+{
+    navElem = document.getElementById("blog");
     navElem.className += " active"; 
 }

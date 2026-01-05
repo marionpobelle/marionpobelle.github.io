@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marion Pobelle - Blog</title>
+
+    <link rel="stylesheet" href="../../css/main.css" />
+    <link rel="stylesheet" href="../../css/page-specific-project.css" />
+    <link rel="stylesheet" href="../../css/video-games.css" />
+    <link rel="stylesheet" href="../../css/text.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+    <navbar id="navbar"></navbar>
+
+    <div class="grid"></div>
+    <div class="grid grid-index-1"></div>
+    <section class="landing-section">
+        <h1>Blog</h1>
+    </section>
+    <!------------------------------------------------------ BLOG -------------------------------------------->
+    <section style="width:75%; margin-top:40px; margin-bottom: 13px;">
+        <div style="justify-content: flex-start;">
+            <p>
+                The blog section is devoted to documenting smaller projects, sometimes outside of programming. Although these projects are not big or impressive, they allowed me to growand have fun!
+            </p>
+        </div>
+    </section>
+
+    <div class="div-row" id="filter-btn-container" style="justify-content: flex-start; width: 75%; margin-top: 30px;">
+      <a class="better-button filter-active-btn" onclick="filterSelection('all')">ALL</a>
+      <a class="better-button" onclick="filterSelection('hardware')" style="margin-bottom:10px;">HARDWARE</a>
+      <a class="better-button" onclick="filterSelection('games')" style="margin-bottom:10px;">GAMES</a>
+    </div>
+    <br />
+    <section id="video-game-section" class="div-row">
+      <div class="div-column" id="video-game-container" style="width: 100%;">
+
+        <template id="video-game-row">
+          <a class="div-row video-game-row object-to-filter text-zone" href="/html/projects/video-games/mirage-miracle-quest.html" id="video-game-card">
+            <div class="vgr-image-container" id="vg-image">
+              <img class="video-game-card-img text-zone" src="/img/video-games/mirage/mirage1.png" id="0">
+            </div>
+            <div class="vgr-text-column div-column" style="margin-left: 20px; padding-top:10px;">
+              <h3 style="margin-bottom: 6px;">Title</h3>
+              <h6 style="margin-bottom: 6px;">Timeline</h6>
+              <p style="margin-bottom: 20px;">Description.</p>
+              <div class="div-row tag-list" style="justify-content: left; margin: 0; margin-left: 10px;"></div>
+            </div>
+          </a>
+        </template>
+
+        
+      </div>
+    </section>
+
+    <footer id="footer"></footer>
+    
+    <script src="/data/blog-data.js"></script>
+    <script src="/js/blog-system.js"></script>
+    <script src="/js/filter-games.js"></script>
+    <script src="/js/components/navbar.js"></script>
+    <script src="/js/components/footer.js"></script>  
+  </body>
+</html>
