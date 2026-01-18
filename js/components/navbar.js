@@ -49,6 +49,7 @@ else if(window.location.pathname.endsWith('/personal-projects.html')
     navElem.className += " active"; 
 }
 else if(window.location.pathname.endsWith('/nds-reshell.html')
+|| window.location.pathname.endsWith('/demo-reel-2025.html')
 || window.location.pathname.endsWith('/blog.html')
 )
 {
