@@ -23,7 +23,7 @@
 .project-window1-image:hover {
     filter: brightness(50%);
     transform: scale(110%);
-    cursor:pointer;
+    cursor: url("/img/assets/Curseur_Clic.png"), auto;
 }
 
 .project-card-data {
