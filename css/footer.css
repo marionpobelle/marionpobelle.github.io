@@ -8,6 +8,7 @@ footer {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    cursor: url("/img/assets/Curseur.png"), auto;
 }
 
 #background-footer {
@@ -20,6 +21,7 @@ footer {
     height: 80px;
     background-color: var(--light-color);
     border: solid var(--dark-color) 1.5px;
+    cursor: url("/img/assets/Curseur.png"), auto;
 }
 
 .footerIcons {
@@ -36,4 +38,6 @@ footer {
 
 .icon-social-media:hover {
     transform: scale(1.2);
+    cursor: url("/img/assets/Curseur_Clic.png"), auto;
+
 }

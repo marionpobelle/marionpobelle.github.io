@@ -25,6 +25,7 @@
   width: 100%; 
   margin-bottom:10px;
   margin-top: 10px;
+  cursor: url("/img/assets/Curseur_Clic.png"), auto;
 }
 
 .vgr-text-column {
@@ -66,6 +67,7 @@
 .video-game-card-img:hover {
   filter: saturate(0.8) sepia(0.7) brightness(70%);
   transform: scale(110%);
+  cursor: url("/img/assets/Curseur_Clic.png"), auto;
 }
 
 .important-tag::after {

@@ -55,6 +55,7 @@ a {
 
 .link-in-text:hover {
   background-color: var(--light-color);
+  cursor: url("/img/assets/Curseur_Clic.png"), auto;
 }
 
 p {

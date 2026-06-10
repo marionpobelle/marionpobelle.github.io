@@ -29,7 +29,8 @@
 .next-project-button:hover {
     color: var(--primary-color);
     background-color: white;
-    cursor:pointer;
+    cursor: url("/img/assets/Curseur_Clic.png"), auto;
+
 }
 
 .next-project-title {
@@ -72,6 +73,7 @@
 
 .gallery-image:hover {
   transform: scale(1.05);
+
 }
 
 .gallery-image-no-border:hover {

@@ -38,7 +38,8 @@ body {
     position: relative;
     padding-bottom: 100px;
     overflow-x: hidden;
-    cursor: default;
+    /* cursor: default; */
+    cursor: url("/img/assets/Curseur.png"), auto;
 }
 
 .grid {
@@ -116,7 +117,8 @@ section {
 .better-button:hover { 
     background-color: white;
     color: var(--dark-color);
-    cursor:pointer;
+    /* cursor:pointer; */
+    cursor: url("/img/assets/Curseur_Clic.png"), auto;
 }
 
 #landing-section {
@@ -224,14 +226,20 @@ button svg {
 
 .close:hover {
   background-color: #CF222E;
+  cursor: url("/img/assets/Curseur_Clic.png"), auto;
+
 }
 
 .maximize:hover {
   background-color: #E6EAEF;
+  cursor: url("/img/assets/Curseur_Clic.png"), auto;
+
 }
 
 .minimize:hover {
   background-color: #E6EAEF;
+  cursor: url("/img/assets/Curseur_Clic.png"), auto;
+
 }
 
 #pre {

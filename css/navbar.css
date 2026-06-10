@@ -42,6 +42,8 @@ navbar {
 
 .nav-link a:hover {
   color: var(--highlight-color);
+  cursor: url("/img/assets/Curseur_Clic.png"), auto;
+
 }
 
 #background-navbar {
