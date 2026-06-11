@@ -35,7 +35,8 @@
 
 .vgr-text-column h3 {
   margin: 0;
-  font-family: 'Cy Grotesk Heavy', sans-serif;
+  font-family: 'BalsamiqSans', sans-serif;
+  font-weight: 900;
   text-transform: uppercase;
 }
 

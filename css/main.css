@@ -61,10 +61,18 @@ body {
     border-right: solid var(--grid-color) 0.5px;
     border-top: solid var(--grid-color) 0.5px;
     border-left: solid var(--grid-color) 0.5px;
-
-    opacity: 0.8;
-    background-image: radial-gradient(circle, var(--grid-color) 1.2px, transparent 1.2px);
-    background-size: 15px 15px;
+  
+    --s: 10px; /* control the size*/
+    --c1: var(--background-color);
+    --c2: var(--grid-color);
+    
+    background:
+      conic-gradient(at 60% 60%,var(--c1) 75%,#0000 0)
+      0 0/calc(5*var(--s)/2) calc(5*var(--s)/2),
+      repeating-conic-gradient(var(--c1) 0 25%,#0000 0 50%)
+      0 0/calc(5*var(--s)) calc(5*var(--s)),
+      repeating-conic-gradient(var(--c2) 0 25%,var(--c1) 0 50%)
+      0 0/var(--s) var(--s);
 }
 
 section {
@@ -132,7 +140,7 @@ section {
   z-index: 3;
   font-weight: 700;
   margin-right: 23px;
-  font-family: "Nunito", sans-serif;
+  font-family: "Asap-Light", sans-serif;
   font-size: 10px;
   color: var(--primary-color);
   text-transform: uppercase;

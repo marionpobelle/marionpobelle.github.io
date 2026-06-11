@@ -1,24 +1,51 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Sarpanch:wght@900&display=swap");
+
 @font-face {
-  font-family: 'CyGrotesk';
-  src: url("/font/CyGrotesk-WideDark.otf") format("opentype");
+  font-family: 'Les Flos Sage';
+  src: url("/font/Les\ Flos\ Sage.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
-  font-family: 'CyGrotesk Heavy';
-  src: url("/font/CyGrotesk-WideHeavy.otf") format("opentype");
+  font-family: 'Asap-Medium';
+  src: url("/font/Asap-Medium.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+@font-face {
+  font-family: 'Asap-MediumItalic';
+  src: url("/font/Asap-MediumItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Asap-Light';
+  src: url("/font/Asap-Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Asap-Thin';
+  src: url("/font/Asap-Thin.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BalsamiqSans';
+  src: url("/font/BalsamiqSans-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 
 h1 {
-  font-family: 'CyGrotesk', sans-serif;
-  font-size: 3.5vh;
+  font-family: 'Les Flos Sage', sans-serif;
+  font-size: 4vh;
   color: var(--primary-color);
   margin-top: 30px;
   margin-bottom: 5px;
@@ -26,23 +53,23 @@ h1 {
 }
 
 h2 {
-  font-family: "Nunito", sans-serif;
+  font-family: 'Asap-Medium', sans-serif;
   font-weight: 400;
   font-size: 5vh;
   color: var(--secondary-color);
 }
 
 h3 {
-  font-family: "Cy Grotesk", sans-serif;
+  font-family: 'Les Flos Sage', sans-serif;
   text-transform: uppercase;
-  font-weight: 800;
+  font-weight: 200;
   font-size: 3vh;
   color: var(--primary-color);
   margin-top: 10px;
 }
 
 a {
-  font-family: "Nunito", sans-serif;
+  font-family: "Asap-MediumItalic", sans-serif;
   font-weight: 400;
   color: var(--primary-color);
   font-size: 15px;
@@ -59,7 +86,7 @@ a {
 }
 
 p {
-  font-family: "Nunito", sans-serif;
+  font-family: 'Asap-Light', sans-serif;
   font-weight: 300;
   font-size: 15px;
   color: var(--primary-color);
@@ -68,7 +95,7 @@ p {
 }
 
 .nicer-text {
-  font-family: "Nunito", sans-serif;
+  font-family: "Asap-Light", sans-serif;
   font-weight: 300;
   font-size: 15px;
   color: var(--primary-color);
@@ -77,7 +104,7 @@ p {
 }
 
 .project-window-title {
-  font-family: "Nunito";
+  font-family: "Asap-Medium";
   font-weight: 550;
   color: var(--primary-color);
   text-decoration: none;
@@ -92,7 +119,7 @@ b {
   z-index: 3;
   font-weight: 700;
   margin-right: 23px;
-  font-family: "Nunito", sans-serif;
+  font-family: "Asap-Light", sans-serif;
   font-size: 10px;
   color: var(--primary-color);
   text-transform: uppercase;
