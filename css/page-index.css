@@ -17,6 +17,17 @@
     padding: 0 10px;
 }
 
+.about-buttons  {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    width: 100%;
+    margin-bottom: 30px;
+    margin-right: 3%;
+    margin-top:20px;
+    align-items: center; 
+}
+
 #about-section div {
     margin-bottom: 10px;
 }
@@ -50,7 +61,7 @@
     #project-section {
         width: 100%;
     }
-    #about-buttons  {
+    .about-buttons  {
         width: 100%;
         flex-direction: column;
         justify-content: space-evenly;
@@ -76,7 +87,7 @@
     #project-section {
         padding: 0 10px;
     }
-    #about-buttons  {
+    .about-buttons  {
         width: 100%;
         flex-direction: column;
         justify-content: space-evenly;

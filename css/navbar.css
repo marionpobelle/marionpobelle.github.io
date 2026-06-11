@@ -30,6 +30,7 @@ navbar {
     background-color: var(--background-color);
     padding-left:10px;
     padding-right:10px;
+    margin-top:2px;
 }
 
 .nav-link a {
