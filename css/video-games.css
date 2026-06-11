@@ -71,7 +71,7 @@
   cursor: url("/img/assets/Curseur_Clic.png"), auto;
 }
 
-.important-tag::after {
+.important-tag {
   background-color: var(--accent-color);
 }
 

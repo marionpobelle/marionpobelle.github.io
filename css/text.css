@@ -115,27 +115,18 @@ b {
   position: relative;
   z-index: 3;
   font-weight: 700;
-  margin-right: 23px;
+  margin-right: 12px;
   font-family: "Asap-Light", sans-serif;
   font-size: 10px;
-  color: var(--primary-color);
   text-transform: uppercase;
+  color: var(--primary-color);
+  border: 1px solid var(--dark-color);
+  border-radius: 4px;
+  padding: 0.6em 2em;
+  background: var(--light-color);
+  box-shadow: 0.25rem 0.25rem var(--dark-color);
 }
 
-b::after {
-  display: block;
-  content: "";
-  position: absolute;
-  left: -8px;
-  right: -8px;
-  top: -4px;
-  bottom: -4px;
-  background-color: var(--light-color);
-  border: solid 1.5px var(--dark-color);
-  z-index: -1;
-  border-radius: 7px;
-  box-shadow: 0 3px var(--dark-color);
-}
 
 .text-highlight {
   font-weight: bold;
