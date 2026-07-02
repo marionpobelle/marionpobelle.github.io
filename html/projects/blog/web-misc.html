@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marion Pobelle - Web/Application mini-projects</title>
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/text.css">
+    <link rel="stylesheet" href="/css/page-specific-project.css">
+    <link rel="stylesheet" href="/css/project-window.css">
+</head>
+<body>
+    <div class="grid grid-header"></div>
+
+    <navbar id="navbar"></navbar>  
+    
+    <div class="grid grid-index-1"></div>
+    <section class="landing-section">
+        <h1>BLOG</h1>
+    </section>
+
+    <section class="game-section">
+        <div class="game-div">
+            <h1 class="game-title-h1">Web/Application mini-projects</h1>
+            <div>
+                <!-- Overview -->
+                <div style="padding-bottom: 20px; padding-top: 10px;">
+                    <h3>OVERVIEW</h3>
+                </div>
+                <div>
+                    <p>
+                        At the end of 2025, I learned very basic Javascript, CSS and HTML so that I could make myself a website to display my portfolio. As 2026 went by, I took interest in
+                        how desktop application were made and, I wanted to try get better at Javascript, CSS and HTML! So I decided to program small useful apps here and there, and to try and make 
+                        something more complex each time. Here are some of the small projects I worked on!
+                    </p>
+                </div>
+
+                <div style="padding-bottom: 20px; padding-top: 10px;">
+                    <h3>POMODORO TIMER</h3>
+                </div>
+                <div class="div-row" style="width: 100%; gap: 40px; padding-bottom: 20px;">
+                    <div>
+                    <p>
+                        <span class="text-highlight">June 2026 - 2 days</span>
+                    </p>
+                    <p>
+                        A small Pomodoro Timer desktop application. It was made using Electron.js as well as Node.js.
+                    </p>
+                    <p>
+                        Each time for focus, break and long break sessions is customizable and saved
+                        for the timer's next use.
+                    </p>
+                    <p>
+                        In addition to basic buttons (start, pause, reset), a button allows to switch in between each mode (focus, break, long break) and another button allows
+                        the user to change the color scheme of the application!
+                    </p>
+                    <p>
+                        I also made custom minimize and close buttons for the application to allow for more visual customization if needed.
+                    </p>
+                    <p>
+                        A circle is dynamically animated following the current timer status. When the timer runs out, a notification is displayed on the application to indicate that the session is over and a SFX is played.
+                    </p>
+                    </div>
+                    <img class="gallery-image" src="/img/blog/mini-projects/pomodoro-project.png" style="width: 30%;">
+                </div>
+
+                <div style="padding-bottom: 20px; padding-top: 10px;">
+                    <h3>TO DO LIST</h3>
+                </div>
+                <div class="div-row" style="width: 100%; gap: 40px; padding-bottom: 20px;">
+                    <img class="gallery-image" src="/img/blog/mini-projects/todolist-project.png" style="width: 33%;">
+                    <div>
+                    <p>
+                        <span class="text-highlight">May 2026 - 2 days</span>
+                    </p>
+                    <p>
+                        A small To Do List desktop application. It was made using Electron.js as well as Node.js.
+                    </p>
+                    <p>
+                        The user can add as many tasks as they would like and they are saved for future use.
+                    </p>
+                    <p>
+                        Each task can be marked as completed or to do. Each task has 4 buttons to: reposition the task above, reposition the task below, edit the task or delete the task.
+                    </p>
+                    <p>
+                        I used this project to learn how to change application icons.
+                    </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer"></footer>
+
+    <script src="/data/video-games.js"></script>
+    <script src="/js/components/navbar.js"></script>
+    <script src="/js/components/footer.js"></script>
+</body>
+</html>

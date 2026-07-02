@@ -43,6 +43,8 @@ else if(window.location.pathname.endsWith('/personal-projects.html')
 || window.location.pathname.endsWith('/costellation.html')
 || window.location.pathname.endsWith('/puppy-guards.html')
 || window.location.pathname.endsWith('/ar-mare.html')
+|| window.location.pathname.endsWith('/ready-save-go.html')
+|| window.location.pathname.endsWith('/music-player.html')
 )
 {
     navElem = document.getElementById("persoprojects");
@@ -51,6 +53,7 @@ else if(window.location.pathname.endsWith('/personal-projects.html')
 else if(window.location.pathname.endsWith('/nds-reshell.html')
 || window.location.pathname.endsWith('/demo-reel-2025.html')
 || window.location.pathname.endsWith('/blog.html')
+|| window.location.pathname.endsWith('/web-misc.html')
 )
 {
     navElem = document.getElementById("blog");

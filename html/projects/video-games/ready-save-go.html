@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marion Pobelle - Ready? Save, go!</title>
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/text.css">
+    <link rel="stylesheet" href="/css/page-specific-project.css">
+    <link rel="stylesheet" href="/css/project-window.css">
+</head>
+<body>
+    <div class="grid grid-header"></div>
+
+    <navbar id="navbar"></navbar>  
+    
+    <div class="grid grid-index-1"></div>
+    <section class="landing-section">
+        <h1>Personal Projects</h1>
+    </section>
+
+    <section class="game-section">
+        <div class="game-div">
+            <h1 class="game-title-h1">Ready? Save, go!</h1>
+            <div class="game-info">
+                <div>
+                    <p>
+                        <span class="text-highlight">Platform: </span>Browser
+                        <br><span class="text-highlight">Duration: </span>1 month
+                        <br><span class="text-highlight">Team size: </span>2
+                        <br><span class="text-highlight">Role: </span>Gameplay Programmer, UI Programmer, UI Artist
+                    </p> 
+                </div>
+                <div class="div-column">
+                    <a class="better-button" href="https://evileyezzzz.itch.io/ready-save-go" target="_blank" style="margin-bottom:20px;">Find on Itch.io</a>
+                    <a class="better-button" href="https://github.com/marionpobelle/Coolmath-Jam-2026" target="_blank" style="margin-bottom:20px;">Find on Github</a>
+                </div>
+            </div>
+            <div>
+                <p>All screenshots and videos reflect the work of the entire team (art, code, audio, design…)</p>
+            </div>
+            <div>
+                <!-- Overview -->
+                <div style="padding-bottom: 20px; padding-top: 10px;">
+                    <h3>OVERVIEW</h3>
+                </div>
+                <div>
+                    <p>
+                        Ready? Save, Go! is an entry for the <a class="link-in-text" href="https://itch.io/jam/coolmath-game-jam-2026" target="_blank">Coolmath Game Jam 2026</a>, with the objective to teach players about <span class="text-highlight">financial literacy concepts and how to use money wisely</span>.
+                    </p>
+
+                    <p>
+                        You just moved out from your parents’ place and you want to learn to become independent. For the upcoming year you must manage your money, and have at least 5000$ in your savings while being as happy as possible to see if you can make it on your own!
+                    </p>
+                    <div>
+                        <p><span class="text-highlight">My duties included:</span>
+                            <ul>
+                                <li class="nicer-text">Develop gameplay features (minigames, random events, scoring system…)</li>
+                                <li class="nicer-text">UI design and implementation (menus, scoreboard, lobby, HUD…)</li>
+                                <li class="nicer-text">Asset integration (2D sprites, animations, music and SFX…)</li>
+                                <li class="nicer-text">Collaborating closely with the team to ensure the development follows the design and the game can be easily fine-tuned and balanced</li>
+                                <li class="nicer-text">Maintain a feature list with regular updates so that everyone can track progress</li>
+                                <li class="nicer-text">And more!</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+                <!-- Specific Section -->
+                <div style="padding-bottom: 20px;  padding-top: 10px;">
+                    <h3>MINIGAMES & RANDOM EVENTS </h3>
+                </div>
+                <div>
+                    <p>
+                        A <span class="text-highlight">minigame</span> is created from a <span class="text-highlight">Scriptable Object</span> that defines the minigame's information (name, associated Unity scene, icon) as well as an <span class="text-highlight">enumerator for consistent tracking</span>. 
+                        This allow the application to chose a minigame from a list of enumerator values and to then load the right information and game scene.
+                    </p>
+                    <p>
+                        Each <span class="text-highlight">random</span> event is defined by a Scriptable Object that contains the <span class="text-highlight">name</span> of the event, its <span class="text-highlight">description</span>, a <span class="text-highlight">tooltip</span> text that explains how the outcome of the random event can <span class="text-highlight">impact one's financial situation</span>
+                        as well as a <span class="text-highlight">list of options</span> to pick from. These <span class="text-highlight">options</span> themselves are also Scriptable Objects that contains the option's <span class="text-highlight">name, money and happiness modifiers</span> as well as the <span class="text-highlight">type of impact</span> (immediate if the money and happiness are
+                        changed immediately, randomized if the modifier's values can be inversed or delayed if the event's result depends on certain conditions).
+                    </p>
+                </div>
+                <!-- Specific Section -->
+                <div style="padding-bottom: 20px;  padding-top: 10px;">
+                    <h3>GAMEPLAY</h3>
+                </div>
+                <div>
+                    <p>
+                        Each game is made of <span class="text-highlight">12 loops</span> (that represent a full year) containing <span class="text-highlight">a minigame as well as a random event</span>. When a loop is loaded, one random event is selected
+                        from a list of all available random events, and two minigames are randomly selected so that the player can choose which one they want to play.
+                    </p>
+                    <p>
+                        The <span class="text-highlight">lobby menu</span> (where random events are played and minigames selected) allows the player to <span class="text-highlight">track their current money, happiness and score</span>. It also displays
+                        <span class="text-highlight">additional information</span>, such as monthly salary, expenses as well as the year's timeline. 
+                    </p>
+                    <p>
+                        For ease of use and to accommodate browser support, each minigame uses <span class="text-highlight">mouse only controls</span>.
+                    </p>
+                    <div class="div-row" style="width: 100%; height: 100%; margin-bottom: 30px;">
+                        <iframe class="video-trailer" src="https://www.youtube.com/embed/Ws6UASPOWXw?si=krvdZOQcBlYsj8l_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allow="fullscreen"></iframe>
+                    </div>
+                </div>
+                <!-- Gallery -->
+                <div style="padding-bottom: 20px;  padding-top: 10px;">
+                    <h3>GALLERY</h3>
+                </div>       
+                <div class="div-row" style="width: 100%; gap: 20px; padding-bottom: 20px;">
+                    <div class="div-column">
+                        <div class="div-row" style="width: 100%; gap: 20px; padding-bottom: 20px;">
+                            <img class="gallery-image" src="/img/video-games/ready-save-go/ready-save-go1.jpg" style="width: 49%;">
+                            <img class="gallery-image" src="/img/video-games/ready-save-go/ready-save-go2.jpg" style="width: 49%;">
+                        </div>
+                        <div class="div-row" style="width: 100%; gap: 20px; padding-bottom: 20px;">
+                            <img class="gallery-image" src="/img/video-games/ready-save-go/ready-save-go3.jpg" style="width: 49%;">
+                            <img class="gallery-image" src="/img/video-games/ready-save-go/ready-save-go4.jpg" style="width: 49%;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="div-row other-projects" id="other-projects"></section>
+
+    <footer id="footer"></footer>
+
+    <script src="/data/video-games.js"></script>
+\    <script src="/js/components/navbar.js"></script>
+    <script src="/js/components/footer.js"></script>
+    <script src="/js/components/other-projects.js"></script>
+    <script src="/js/next-vg.js"></script>
+</body>
+</html>

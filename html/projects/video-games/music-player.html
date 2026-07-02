@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marion Pobelle - Music Player</title>
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/text.css">
+    <link rel="stylesheet" href="/css/page-specific-project.css">
+    <link rel="stylesheet" href="/css/project-window.css">
+</head>
+<body>
+    <div class="grid grid-header"></div>
+
+    <navbar id="navbar"></navbar>  
+    
+    <div class="grid grid-index-1"></div>
+    <section class="landing-section">
+        <h1>Personal Projects</h1>
+    </section>
+
+    <section class="game-section">
+        <div class="game-div">
+            <h1 class="game-title-h1">Music Player</h1>
+            <div class="game-info">
+                <div>
+                    <p>
+                        <span class="text-highlight">Platform: </span>PC
+                        <br><span class="text-highlight">Duration: </span>7 days
+                        <br><span class="text-highlight">Team size: </span>1
+                        <br><span class="text-highlight">Role: </span>Programmer
+                    </p> 
+                </div>
+                <div class="div-column">
+                    <a class="better-button" href="https://zizelexe.itch.io/" target="_blank" style="margin-bottom:20px;">[COMING SOON] Find on Itch.io</a>
+                </div>
+            </div>
+            <div class="div-row" style="width: 100%; gap: 40px; padding-bottom: 20px;">
+                <div>
+                    <!-- Overview -->
+                <div style="padding-bottom: 20px; padding-top: 10px;">
+                    <h3>OVERVIEW</h3>
+                </div>
+                <div>
+                    <p>
+                        A small Music Player made with Electron.js and Node.js! The application goes into the <span class="text-highlight">user's Music folder</span>, gather any <span class="text-highlight">.mp3 or .wav file</span> it can find and
+                        plays them!
+                    </p>
+                    <div>
+                        <p><span class="text-highlight">My duties included:</span>
+                            <ul>
+                                <li class="nicer-text">Developping the systems (gathering data, progress bar, play/pause/next/previous logic...)</li>
+                                <li class="nicer-text">Implementing the UI using CSS</li>
+                                <li class="nicer-text">Performance control and optimization</li>
+                                <li class="nicer-text">And more!</li>
+                            </ul>
+                        </p>
+                    </div>
+                    <p>
+                        I intend on <span class="text-highlight">continuing to work</span> on this project more to make a bigger version of the application that would include <span class="text-highlight">playlist integration</span>, <span class="text-highlight">queueing songs</span> as well as <span class="text-highlight">keyboard
+                        shortcuts</span> to play, pause and go to the previous or the next song.
+                    </p>
+                </div>
+                <!-- Specific Section -->
+                <div style="padding-bottom: 20px;  padding-top: 10px;">
+                    <h3>FEATURES</h3>
+                </div>
+                <div>
+                    <p>
+                        There are 3 buttons at the top of the application: to the left, a button to <span class="text-highlight">change the color scheme</span> of the display, in the middle, a <span class="text-highlight">volume slider</span> to adjust the music volume 
+                        (saved in between application uses) and on the right, <span class="text-highlight">custom minimize and close buttons</span>.
+                    </p>
+                    <p>
+                        At the bottom, there are buttons that allow the user to <span class="text-highlight">switch between repeat, repeat-one and shuffle mode</span>, a <span class="text-highlight">progress bar</span> that the player can use to go back or forward in the current audio,
+                        <span class="text-highlight">previous and next song</span> buttons, a <span class="text-highlight">play/pause</span> button as well as a button to pull out the <span class="text-highlight">track</span> list.
+                    </p>
+                    <p>
+                        Each song in the music list is clickable in order to change the playing track!
+                    </p>
+                </div>
+                <!-- Specific Section -->
+                <div style="padding-bottom: 20px;  padding-top: 10px;">
+                    <h3>METADATA</h3>
+                </div>
+                <div>
+                    <p>
+                        Using Electron.js and Node.js, the music player <span class="text-highlight">goes into the Music directory</span> of the user's computer and look at all the files. It skips any file that isn't a <span class="text-highlight">.mp3 or a .wav</span>.
+                    </p>
+                    <p>
+                        Then looking at the files, it will <span class="text-highlight">fill up an array</span> with each song's information: <span class="text-highlight">name, artist, cover art, and path to the audio file</span>.
+                    </p>
+                    <p>
+                        For the name of the song, the application takes the name of the file. For the artist and the cover art, I used the <span class="text-highlight">jsmediatags library</span> to be able to get these elements from the file's <span class="text-highlight">metadata</span>.
+                    </p>
+                </div>
+                </div>
+                <div class="div-column" style="width: 25%; gap:40px; padding-bottom: 40px;">
+                    <img class="gallery-image" src="/img/video-games/music-player/music-player1.gif">
+                    <img class="gallery-image" src="/img/video-games/music-player/music-player2.gif">
+                </div>
+           </div>
+        </div>
+    </section>
+
+    <section class="div-row other-projects" id="other-projects"></section>
+
+    <footer id="footer"></footer>
+
+    <script src="/data/video-games.js"></script>
+\    <script src="/js/components/navbar.js"></script>
+    <script src="/js/components/footer.js"></script>
+    <script src="/js/components/other-projects.js"></script>
+    <script src="/js/next-vg.js"></script>
+</body>
+</html>
