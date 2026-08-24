@@ -1,6 +1,15 @@
 const blogDatas = 
 [
     {
+        "name" : "Games for Change Festival",
+        "image1": "/img/blog/games-for-change/games-for-change-keyart.png",
+        "link": "blog/games-for-change.html",
+        "filter-type": "all events",
+        "tags": ["Conferences", "Community", "Playtest"],
+        "description": "A festival taking place in NYC, centered around how play has evolved beyond games into a force for change.",
+        "timeline": "July 2026",
+    },
+    {
         "name" : "Web/Application mini-projects",
         "image1": "/img/blog/mini-projects/mini-projects-keyart.png",
         "link": "blog/web-misc.html",

@@ -54,6 +54,7 @@ else if(window.location.pathname.endsWith('/nds-reshell.html')
 || window.location.pathname.endsWith('/demo-reel-2025.html')
 || window.location.pathname.endsWith('/blog.html')
 || window.location.pathname.endsWith('/web-misc.html')
+|| window.location.pathname.endsWith('/games-for-change.html')
 )
 {
     navElem = document.getElementById("blog");
