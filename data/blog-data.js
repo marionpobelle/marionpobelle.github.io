@@ -10,7 +10,7 @@ const blogDatas =
         "timeline": "July 2026",
     },
     {
-        "name" : "Web/Application mini-projects",
+        "name" : "Web | Application mini-projects",
         "image1": "/img/blog/mini-projects/mini-projects-keyart.png",
         "link": "blog/web-misc.html",
         "filter-type": "all web",
