@@ -44,61 +44,6 @@
     width: 75%;
 }
 
-@media screen and (max-width: 1000px) {
-    #about-section {
-        width: 100%;
-        flex-direction: row;
-        justify-content: space-evenly;
-    }
-    #about-section div {
-        width: 30%;
-        height: fit-content;
-        text-align: justify;
-    }
-    #index-main-section {
-        flex-direction: column;
-    }
-    #project-section {
-        width: 100%;
-    }
-    .about-buttons  {
-        width: 100%;
-        flex-direction: column;
-        justify-content: space-evenly;
-    }
-    #skill-vignets  {
-        width: 100%;
-        flex-direction: column;
-        justify-content: space-evenly;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    #about-section {
-        width: 100%;
-        flex-direction: column;
-        justify-content: space-evenly;
-    }
-    #about-section div {
-        width: 100%;
-        height: fit-content;
-        text-align: justify;
-    }
-    #project-section {
-        padding: 0 10px;
-    }
-    .about-buttons  {
-        width: 100%;
-        flex-direction: column;
-        justify-content: space-evenly;
-    }
-    #skill-vignets  {
-        width: 100%;
-        flex-direction: column;
-        justify-content: space-evenly;
-    }
-}
-
 .project-window2 {
     height: auto;
     padding-top: 50px;
@@ -119,4 +64,65 @@
 
 .intro-title {
     margin:auto;
+}
+
+@media screen and (max-width: 1000px) {
+    #about-section {
+        width: 100%;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    #about-section div {
+        width: 100%;
+        height: fit-content;
+        text-align: justify;
+    }
+    .profile-picture {
+    width: 26%;
+    margin: auto;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    }
+    #index-main-section {
+        flex-direction: column;
+    }
+    #project-section {
+        width: 100%;
+    }
+    #skill-vignets  {
+        width: 100%;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #about-section {
+        width: 100%;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    #about-section div {
+        width: 100%;
+        height: fit-content;
+        flex-direction: column;
+        text-align: justify;
+    }
+    .profile-picture {
+    width: 50%;
+    margin: auto;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    }
+    .intro-title{
+        text-align: center;
+    }
+    #project-section {
+        padding: 0 10px;
+    }
+    #skill-vignets  {
+        width: 100%;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
 }
