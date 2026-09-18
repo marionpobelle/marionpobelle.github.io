@@ -34,7 +34,7 @@
                     </p> 
                 </div>
                 <div class="div-column">
-                    <a class="better-button" href="https://zizelexe.itch.io/" target="_blank" style="margin-bottom:20px;">[COMING SOON] Find on Itch.io</a>
+                    <a class="better-button" href="https://zizelexe.itch.io/music-player-mp3wav" target="_blank" style="margin-bottom:20px;">Find on Itch.io</a>
                 </div>
             </div>
             <div class="content-row">
@@ -45,27 +45,24 @@
                 </div>
                 <div>
                     <p>
-                        A small Music Player made with Electron.js and Node.js! The application goes into the <span class="text-highlight">user's Music folder</span>, gather any <span class="text-highlight">.mp3 or .wav file</span> it can find and
-                        plays them!
+                        A Music Player made with <span class="text-highlight">Electron.js</span> and Node.js, using HTML, CSS and JavaScript! 
+                        The application goes into the user's Music folder, gather any .mp3 or .wav file it can find and 
+                        plays them! There is a <span class="text-highlight">mini version</span> as well as a <span class="text-highlight">desktop version</span> that has more features.
                     </p>
                     <div>
                         <p><span class="text-highlight">My duties included:</span>
                             <ul>
-                                <li class="nicer-text">Developping the systems (gathering data, progress bar, play/pause/next/previous logic...)</li>
+                                <li class="nicer-text">Developping the systems (gathering data, progress bar, play/pause/next/previous logic, queue, playlists...)</li>
                                 <li class="nicer-text">Implementing the UI using CSS</li>
                                 <li class="nicer-text">Performance control and optimization</li>
                                 <li class="nicer-text">And more!</li>
                             </ul>
                         </p>
                     </div>
-                    <p>
-                        I intend on <span class="text-highlight">continuing to work</span> on this project more to make a bigger version of the application that would include <span class="text-highlight">playlist integration</span>, <span class="text-highlight">queueing songs</span> as well as <span class="text-highlight">keyboard
-                        shortcuts</span> to play, pause and go to the previous or the next song.
-                    </p>
                 </div>
                 <!-- Specific Section -->
                 <div style="padding-bottom: 20px;  padding-top: 10px;">
-                    <h3>FEATURES</h3>
+                    <h3>FEATURES - MINI PLAYER</h3>
                 </div>
                 <div>
                     <p>
@@ -82,14 +79,61 @@
                 </div>
                 <!-- Specific Section -->
                 <div style="padding-bottom: 20px;  padding-top: 10px;">
+                    <h3>FEATURES - DESKTOP PLAYER</h3>
+                </div>
+                <div>
+                    <p>
+                        <span class="text-highlight">RIGHT SIDE - PLAYER</span>
+                    </p>
+                    <p>
+                        There are 3 buttons at the top of the application: to the left, a button to <span class="text-highlight">change the color scheme</span> of the display, in the middle, a <span class="text-highlight">volume slider</span> to adjust the music volume 
+                        (saved in between application uses) and on the right, <span class="text-highlight">custom minimize and close buttons</span>.
+                    </p>
+                    <p>
+                        At the bottom, there are buttons that allow the user to <span class="text-highlight">switch between repeat, repeat-one and shuffle mode</span>, a <span class="text-highlight">progress bar</span> that the player can use to go back or forward in the current audio,
+                        <span class="text-highlight">previous and next song</span> buttons, a <span class="text-highlight">play/pause</span> button as well as a button to pull out the <span class="text-highlight">queue</span> list.
+                    </p>
+                    <img style=" width:80%; padding-bottom: 20px; padding-top: 20px; display:block; margin-left:auto; margin-right:auto;" src="/img/video-games/music-player/music-player-desktop1.gif">
+                    <p>
+                        <span class="text-highlight">MIDDLE SIDE - MUSIC LIST</span>
+                    </p>
+                    <p>
+                        You can access all of the song from the <span class="text-highlight">current playlist</span> in the <span class="text-highlight">music list</span> in the middle. Each song in the music list is clickable in order to change the playing track!
+                    </p>
+                    <p>
+                        There is a <span class="text-highlight">search bar</span> allowing you to search for specific <span class="text-highlight">songs or artists</span>.
+                    </p>
+                    <p>
+                        The hearts on the left side of each song in the list represents the songs that are located in a folder named "Favorite", "Favorites", "favorites", "favorites", "Favori", "favori", "Favoris" or "favoris".
+                    </p>
+                    <p>
+                        <span class="text-highlight">Right clicking</span> a song in the list lets the user <span class="text-highlight">add it to the queue</span>. The queue resets when changing playlist.
+                    </p>
+                    <img style=" width:80%; padding-bottom: 20px; padding-top: 20px; display:block; margin-left:auto; margin-right:auto;" src="/img/video-games/music-player/music-player-desktop2.gif">
+                    <p>
+                        <span class="text-highlight">LEFT SIDE - PLAYLISTS</span>
+                    </p>
+                    <p>
+                        The left side displays all of the available <span class="text-highlight">playlists</span>. Clicking a playlist sets it as current playlist and sets up the first song of the playlist as the currently played song.
+                        To make playlists, make folders in the Music folder. The name of the playlist will be the name of the folder and the playlist will contain the songs that are in that folder.
+                    </p>
+                    <p>
+                        There is a <span class="text-highlight">search bar</span> allowing you to search for specific <span class="text-highlight">playlists</span>.
+                    </p>
+                    <img style=" width:80%; padding-bottom: 20px; padding-top: 20px; display:block; margin-left:auto; margin-right:auto;" src="/img/video-games/music-player/music-player-desktop3.gif">
+                </div>
+                <!-- Specific Section -->
+                <div style="padding-bottom: 20px;  padding-top: 10px;">
                     <h3>METADATA</h3>
                 </div>
                 <div>
                     <p>
                         Using Electron.js and Node.js, the music player <span class="text-highlight">goes into the Music directory</span> of the user's computer and look at all the files. It skips any file that isn't a <span class="text-highlight">.mp3 or a .wav</span>.
+                        The <span class="text-highlight">desktop version</span> of the music player will look for <span class="text-highlight">folders to make playlists</span> from as well.
                     </p>
                     <p>
-                        Then looking at the files, it will <span class="text-highlight">fill up an array</span> with each song's information: <span class="text-highlight">name, artist, cover art, and path to the audio file</span>.
+                        Then looking at the files, it will <span class="text-highlight">fill up an array</span> with each song's information: <span class="text-highlight">name, artist, cover art, and path to the audio file</span>. The <span class="text-highlight">desktop version</span> will also save the 
+                        <span class="text-highlight">name of the folder</span> the song is <span class="text-highlight">stored in</span> to know which <span class="text-highlight">playlist</span> it belongs to.
                     </p>
                     <p>
                         For the name of the song, the application takes the name of the file. For the artist and the cover art, I used the <span class="text-highlight">jsmediatags library</span> to be able to get these elements from the file's <span class="text-highlight">metadata</span>.
