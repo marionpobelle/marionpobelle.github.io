@@ -31,7 +31,7 @@ const videoGameDatas =
         "tags": ["Javascript", "HTML", "CSS", "Electron.js", "Node.js"],
         "description":`A local mp3/wav music player that reads any file located in the Music folder of the user's computer.`,
         "type": "Desktop application",
-        "timeline": "June 2026",
+        "timeline": "June 2026 - August 2026",
         "role": "Programmer",
     }, 
     {
