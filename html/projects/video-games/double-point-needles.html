@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marion Pobelle - Double Point Needles</title>
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/text.css">
+    <link rel="stylesheet" href="/css/page-specific-project.css">
+    <link rel="stylesheet" href="/css/project-window.css">
+</head>
+<body>
+    <div class="grid grid-header"></div>
+
+    <navbar id="navbar"></navbar>  
+    
+    <div class="grid grid-index-1"></div>
+    <section class="landing-section">
+        <h1>Personal Projects</h1>
+    </section>
+
+    <section class="game-section">
+        <div class="game-div">
+            <h1 class="game-title-h1">Double Point Needles</h1>
+            <div class="game-info">
+                <div>
+                    <p>
+                        <span class="text-highlight">Platform: </span>Browser
+                        <br><span class="text-highlight">Duration: </span>2 days
+                        <br><span class="text-highlight">Team size: </span>3
+                        <br><span class="text-highlight">Role: </span>Gameplay Programmer, UI Programmer, Audio Programmer
+                    </p> 
+                </div>
+                <div class="div-column">
+                    <a class="better-button" href="https://maureen-bst.itch.io/double-point-needles" target="_blank" style="margin-bottom:20px;">Find on Itch.io</a>
+                    <a class="better-button" href="https://github.com/marionpobelle/Tricot-WGJ-2026" target="_blank" style="margin-bottom:20px;">Find on Github</a>
+                </div>
+            </div>
+            <div>
+                <p>All screenshots and videos reflect the work of the entire team (art, code, audio, design…)</p>
+            </div>
+            <div>
+                <!-- Overview -->
+                <div style="padding-bottom: 20px; padding-top: 10px;">
+                    <h3>OVERVIEW</h3>
+                </div>
+                <div>
+                    <p>
+                        How do you get proper rest when your inner voice urges you to work, plan, and anticipate? 
+                    </p>
+                    <p>
+                        This was the question that drove the creative process behind our submission for the <a class="link-in-text" href="https://itch.io/jam/women-game-jam-2026" target="_blank">Women Game Jam 2026</a>, follwing the theme of <span class="text-highlight">learning to say no</span>.
+                    </p>
+
+                    <p>
+                        I worked with Marine Mousset (2D Artist & UI/UX Designer) and Maureen Bastian (Game & Narrative designer) to create this cozy narrative puzzle game, which explores the challenge 
+                        of sitting down to knit when your mind is flooded with thoughts and to-do lists. Our approach to the theme is the notion of one's personal tyrant: the quiet voice full of guilt, 
+                        anxiety, and injunctions that exhausts you when you are simply trying to relax. Resting, calming the mind and the thought spirals is often way easier said than done: 
+                        how can you relax when you're always battling against yourself in silence? 
+                    </p>
+                    <div>
+                        <p><span class="text-highlight">My duties included:</span>
+                            <ul>
+                                <li class="nicer-text">Develop gameplay features (puzzles, interactions, dialogues, scarf coloring…)</li>
+                                <li class="nicer-text">UI implementation (main menu, puzzles, dialogues, end screen…)</li>
+                                <li class="nicer-text">Asset integration (2D sprites, animations, music and SFX…)</li>
+                                <li class="nicer-text">Collaborating closely with the team to ensure the development follows the design and the game can be easily fine-tuned and balanced</li>
+                                <li class="nicer-text">Maintain a feature list with regular updates so that everyone can track progress</li>
+                                <li class="nicer-text">And more!</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+                <!-- Specific Section -->
+                <div style="padding-bottom: 20px;  padding-top: 10px;">
+                    <h3>YARNSPINNER </h3>
+                </div>
+                <div>
+                    <p>
+                        YarnSpinner is a great tool that facilitates the seamless implementation of narration in a game. I had been wanting to try it for a very long time and this was the perfect 
+                        opportunity!
+                    </p>
+                    <p>
+                        YarnSpinner includes a pre-made object that is the <span class="text-highlight">point of contact for both UI and code</span> called the <span class="text-highlight">Dialogue System</span>. This object contains the UI for the dialogue but, 
+                        is also the bridge between the content of the Yarn project (nodes, variables, text, choices...) and the Unity project's code. Each <span class="text-highlight">dialogue option</span> has a <span class="text-highlight">string type variable</span> attached 
+                        to it that corresponds to <span class="text-highlight">an enum's values and that influences the color of the knitting wool</span> and that was communicated to the code through the Dialogue System, from narration to gameplay.
+                    </p>
+                    <p>
+                        I had only 2 days to learn and work with YarnSpinner for this game jam but, I'll definitely tinker with it some more! It has a solid basic documentation and I'd love to explore the UI customization's limits.
+                    </p>
+                </div>
+                <!-- Specific Section -->
+                <div style="padding-bottom: 20px;  padding-top: 10px;">
+                    <h3>PUZZLES</h3>
+                </div>
+                <div>
+                    <p>
+                        The kind of puzzle used in Double Point Needles is very common but I never implemented anything like this before. I had to think of a structure that wouldn't be too daunting to implement as 
+                        I was short on time but that would also be easy to adapt to different sizes of puzzles.
+                    </p>
+                    <p>
+                        The puzzle system is made out of 3 elements:
+                        <ul>
+                            <li class="nicer-text">A <span class="text-highlight">Scriptable Object</span> used to <span class="text-highlight">set up the puzzles</span>. It contains lists of enum values for each line of the puzzle, with the enum values 'Start', 'End', 'Target' and 'Empty'.</li>
+                            <li class="nicer-text">A <span class="text-highlight">Point Prefab</span>, that is aware of its <span class="text-highlight">state (start, end, target, empty)</span> as well as of the <span class="text-highlight">points and lines surrounding it</span>. Its sprite depends on its state.</li>
+                            <li class="nicer-text">The puzzle UI itself contains a <span class="text-highlight">Point Holder</span> that gathers lines of points and a <span class="text-highlight">Line Holder</span> that regroups all the puzzle lines, sorted vertically and horizontally.</li>
+                        </ul>
+                    </p>
+                    <p>
+                        The <span class="text-highlight">position of the player</span> is initialized to the starting point of the puzzle and then <span class="text-highlight">updated as the game registers inputs</span>. When pressing a puzzle input (arrow left, up, right, down), the puzzle <span class="text-highlight">checks
+                        the current player position point for neighbors</span> in the direction that was pressed and <span class="text-highlight">animates</span> the player position and the lines and <span class="text-highlight">updates</span> the player position accordingly.
+                    </p>
+                    <p>
+                        Each Point Prefab has an <span class="text-highlight"> IsValid boolean</span>. A puzzle is deemed <span class="text-highlight">completed</span> when each point that is a <span class="text-highlight">Start, End or Target state has its IsValid boolean set to true</span> and if the <span class="text-highlight">current player position is the Point Prefab with the End state</span>.
+                    </p>
+                </div>
+                <!-- Gallery -->
+                <div style="padding-bottom: 20px;  padding-top: 10px;">
+                    <h3>GALLERY</h3>
+                </div>       
+                <div class="div-row" style="width: 100%; gap: 20px; padding-bottom: 20px;">
+                    <div class="div-column">
+                        <div class="image-row-container">
+                            <img class="gallery-image image-row-2" src="/img/video-games/double-point-needles/dpneedles1.jpg">
+                            <img class="gallery-image image-row-2" src="/img/video-games/double-point-needles/dpneedles4.jpg">
+                        </div>
+                        <div class="image-row-container">
+                            <img class="gallery-image image-row-2" src="/img/video-games/double-point-needles/dpneedles3.png">
+                            <img class="gallery-image image-row-2" src="/img/video-games/double-point-needles/dpneedles2.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="div-row other-projects" id="other-projects"></section>
+
+    <footer id="footer"></footer>
+
+    <script src="/data/video-games.js"></script>
+\    <script src="/js/components/navbar.js"></script>
+    <script src="/js/components/footer.js"></script>
+    <script src="/js/components/other-projects.js"></script>
+    <script src="/js/next-vg.js"></script>
+</body>
+</html>

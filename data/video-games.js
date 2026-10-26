@@ -1,5 +1,6 @@
 const videoGameDatas = 
 [
+    //PROFESSIONAL PROJECTS
     {
         "name" : "Mirage Miracle Quest",
         "image1": "/img/video-games/key-art/mirage-keyart.jpg",
@@ -22,7 +23,18 @@ const videoGameDatas =
         "timeline": "July 2024 - August 2024",
         "role": "Gameplay, User Interface, Editor, Tool",
     }, 
-
+    //PERSONNAL PROJECTS
+    {
+        "name" : "Double Point Needles",
+        "image1": "/img/video-games/key-art/double-point-needles-keyart.jpg",
+        "link": "video-games/double-point-needles.html",
+        "filter-type": "all jam",
+        "tags": ["Unity", "Woman Game Jam 2026", "YarnSpinner"],
+        "description":`On a rainy, cozy evening, Claire sits down to knit a scarf.`,
+        "type": "Puzzle, Narrative",
+        "timeline": "October 16th - October 18th 2026",
+        "role": "Programmer",
+    }, 
     {
         "name" : "Music Player",
         "image1": "/img/video-games/key-art/music-player-keyart.png",
@@ -39,7 +51,7 @@ const videoGameDatas =
         "image1": "/img/video-games/key-art/ready-save-go-keyart.jpg",
         "link": "video-games/ready-save-go.html",
         "filter-type": "all jam",
-        "tags": ["Unity", "Coolmath Game jam", "Browser"],
+        "tags": ["Unity", "Coolmath Game jam 2026", "Browser"],
         "description":`A minigame collection game that teaches small but important financial literacy concepts. Entry for the Coolmath Game Jam 2026.`,
         "type": "Minigames",
         "timeline": "May 2026",

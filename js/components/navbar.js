@@ -45,6 +45,7 @@ else if(window.location.pathname.endsWith('/personal-projects.html')
 || window.location.pathname.endsWith('/ar-mare.html')
 || window.location.pathname.endsWith('/ready-save-go.html')
 || window.location.pathname.endsWith('/music-player.html')
+|| window.location.pathname.endsWith('/double-point-needles.html')
 )
 {
     navElem = document.getElementById("persoprojects");
