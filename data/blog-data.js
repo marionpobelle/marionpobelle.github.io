@@ -1,6 +1,15 @@
 const blogDatas = 
 [
     {
+        "name" : "Forum des Images October 2026: Mirage Miracle Quest Presentation",
+        "image1": "/img/blog/forum-image-2026/forum-image-keyart.png",
+        "link": "blog/forum-des-images.html",
+        "filter-type": "all events",
+        "tags": ["Conferences", "Community"],
+        "description": "A presentation given in the context of the ”Be Beautiful and Shut Up!” opening program for the 2026–2027 season at the Forum des images, a week-long tribute to Maria Schneider.",
+        "timeline": "October 2026",
+    },
+    {
         "name" : "Games for Change Festival",
         "image1": "/img/blog/games-for-change/games-for-change-keyart.png",
         "link": "blog/games-for-change.html",
